@@ -1,0 +1,4 @@
+- git branch 
+- git log
+- git checkout 
+- 

@@ -1,11 +1,9 @@
 # 目的
 > 不断学习，提升自己
 # 目录
-### TypeScript
-### JavaScript
-- [数据类型](./Javascript/数据类型.md)
-- [数组方法](./Javascript/数组方法.md)
+- [TypeScript](./TypeScript/index.md)
+- [JavaScript](./Javascript/index.md)
+- [Vue](./Vue/index.md)
+- [React](./React/index.md)
+- [Java](./Java/index.md)
 
-### Vue
-### React
-### Java
