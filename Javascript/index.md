@@ -1,1 +1,9 @@
-- 1、动态类型， 可以使用同一个变量来存储不同类型的数据
+- 数据类型
+- 操作符
+  - 可选链操作符javascript-optional-chaining`a?.b`
+  - `~`
+- 数组方法
+- 原型链
+  - [new操作符](./new/index.md)
+- 正则
+- 日期Date
