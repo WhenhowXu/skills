@@ -3,7 +3,15 @@
   - 可选链操作符javascript-optional-chaining`a?.b`
   - `~`
 - 数组方法
+  - [pop\unshift\shift\push]
+  - [reduce、reduceRight]()
+  - [sort]
+  - [indexOf\lastIndexOf]
+  - [find\findIndex]
+  - [map\forEach]
+  - [filter]
 - 原型链
   - [new操作符](./new/index.md)
+  - [什么是原型链]()
 - 正则
 - 日期Date
