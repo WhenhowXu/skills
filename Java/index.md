@@ -6,9 +6,15 @@
 
 ### 流程控制
 
-- [if 判断]()
-- [switch 多重选择]()
-- [while 循环]()
-- [do while 循环]()
-- [for 循环]()
-- [break 和 continue]()
+- [if 判断](./processController/IfTest.java)
+- [switch 多重选择](./processController/SwitchTest.java)
+- [while 循环](./processController/WhileTest.java)
+- [do while 循环](./processController/DoWhileTest.java)
+- [for 循环](./processController/ForTest.java)
+- [break 和 continue](./processController/BreakTest.java)
+
+### 数组操作
+- [数组遍历](./arrayOperation/TraversalTest.java)
+- [数组排序](./arrayOperation/SortTest.java)
+- [多维数组](./arrayOperation/DimensionsTest.java)
+- [命令行参数](./arrayOperation/Test.java)
