@@ -19,6 +19,7 @@ public class StaticTest{
         System.out.println(m.number);
         System.out.println(n.number);
 
+        // 推荐用类名来访问静态字段
         System.out.println(Person.number); 
     }
 }
