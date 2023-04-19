@@ -109,43 +109,161 @@ let r = arr.forEach((value, index, array) => {
 ```
 
 ### includes 判断数组中是否包含某项
+
 `includes(searchItem, formIndex)`
+
 - formIndex: 为查找开始索引
 - 返回值：true/false
+
 ```js
 const arr = [1, undefined, "", 0, NaN, null, false];
-arr.includes(1) // true
-arr.includes(1, 0) // true
-arr.includes(1, 1) // false
-arr.includes(undefined) // true
-arr.includes(NaN) // true
-arr.includes(null) // true
-arr.includes(false) // true
-arr.includes('') // true
+arr.includes(1); // true
+arr.includes(1, 0); // true
+arr.includes(1, 1); // false
+arr.includes(undefined); // true
+arr.includes(NaN); // true
+arr.includes(null); // true
+arr.includes(false); // true
+arr.includes(""); // true
 ```
 
 ### indexOf lastIndexOf 查询数组某一项的索引，匹配不到则返回-1
-`indexOf`
+
+`indexOf(searchItem, startIndex)`
+
+- lastIndexOf 只是查找是从右侧开始
+
 ```js
+const arr = [1, "", undefined, null, {}, NaN, true];
+console.log(arr.indexOf(1)); // 0
+console.log(arr.indexOf(undefined)); // 2
+console.log(arr.indexOf(undefined, 2)); // 2
+console.log(arr.indexOf(undefined, 3)); // -1
+console.log(arr.indexOf(null)); // 3
+console.log(arr.indexOf({})); // -1
+console.log(arr.indexOf(NaN)); // -1
+console.log(arr.indexOf(true)); // 6
 ```
 
-### join
+### join 将数组拼接成字符串
+
+`join(separator)`
+
+- separator 默认是逗号
+
+```js
+const arr = [undefined, 1, "a", false, null, { k: 1 }, NaN];
+arr.join(); // ',1,a,false,,[object Object],NaN'
+```
 
 ### keys vakues
 
-### map
+> 返回由键和键值组成的迭代器 Iterator
+
+### map 映射
+
+`array.map(function(currentValue,index,arr), thisValue)`
+
+```js
+const arr = [1, 2, 3, 4, 5];
+let obj = {};
+let newArr = arr.map((v) => {
+  obj[v] = v;
+  return v + 10;
+}, obj);
+console.log(obj); // {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+console.log(newArr); // [11, 12, 13, 14, 15]
+```
 
 ### unshift push shift pop
 
-### reduce reduceRight
+`unshift(item1,item2,...)`:向数组起始位置添加一个或多个元素
 
-### reverse
+- 返回值: 数组长度
+  `push(item1,item2,...)`:向数组末尾添加一个或多个元素
+- 返回值：数组长度
+  `shift()`:删除第一个元素
+- 返回值：被删除项
+  `pop()`:删除最后一个元素
+- 返回值：被删除项
 
-### slice
+```js
+const arr = [1, 2, 3, 4];
+let m = arr.unshift("a", "b");
+console.log(m); // 6
+let n = arr.unshift("f", "e");
+console.log(n); // 8
+let j = arr.shift();
+console.log(j); // 'a'
+let k = arr.pop();
+console.log(k); // 'e'
+```
+
+### reduce reduceRight 归纳
+
+`reduce(function(total, currentValue, currentIndex, arr), initialValue)`:将一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值
+
+- 可以作为一个高阶函数，用于函数的 compose
+
+```js
+const arr = [1, 2, 3, 4];
+let sum = arr.reduce((cur, total) => {
+  return cur + total;
+}); // 10
+```
+
+### reverse 颠倒数组顺序
+
+- 原数组：改变
+
+```js
+const arr = [1, 2, 3, 4];
+let nArr = arr.reverse();
+console.log(nArr); // [4,3,2,1]
+console.log(arr); // [4,3,2,1]
+nArr === arr; // true
+```
+
+### slice 提取数组上某一部分组成新数组
+
+`slice(startIndex, endIndex)`
+
+- 不包含 endIndex 对应位置的元素
+
+```js
+const arr = [1, 2, 3, 4];
+const p = arr.slice(1, 3); // [2,3]
+const k = arr.slice(); // [2,3,4]
+const j = arr.slice(); // [1,2,3,4]
+```
 
 ### some every
 
-### sort
+`some(function(currentValue,index,arr),thisValue)`: 有一个满足条件则返回 true,否则返回 false
+
+- 找到满足条件的项会跳出当前循环
+  `every(function(currentValue,index,arr),thisValue)`: 都满足条件则返回 true,否则返回 false
+
+```js
+const arr = [1, 2, 3, 4];
+const p = arr.some((v) => {
+  console.log(v);
+  return v > 2;
+});
+```
+
+### sort 排序
+
+`sort(sortfunction)`
+
+- 原数组：改变
+
+```js
+const arr = [10, "Z", "b", "a", "A", 3, 4];
+arr.sort(); // [10, 3, 4, 'A', 'Z', 'a', 'b']
+const arr1 = [3, 10, 1, 100];
+arr1.sort((a, b) => a - b); // [1, 3, 10, 100]
+```
 
 ### splice
 
