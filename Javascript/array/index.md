@@ -265,13 +265,36 @@ const arr1 = [3, 10, 1, 100];
 arr1.sort((a, b) => a - b); // [1, 3, 10, 100]
 ```
 
-### splice
+### splice（嫁接） 删除数组的一部分，并在该部分添加一些项
+
+`splice(index,howmany,item1,.....,itemX)`
+
+- 返回值：被删除的项组成的数组
+- 原数组：改变
+
+```js
+const arr = [1, 2, 3];
+const deleteItems = arr.splice(1);
+consol.log(arr); // [1]
+consol.log(deleteItems); // [2,3]
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const deleteItems1 = arr.splice(1, 0, "a", "b");
+console.log(arr1); // [1, 'a', 'b', 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(deleteItems1); // []
+```
 
 ### toLocalString
 
 ### toRevered toSorted toSpliced
 
+> 对应 revered sort splice,不会改变原数组
+
 ### toString
+
+```js
+const arr = [1, 2, undefined, null, "", NaN, { k: 1 }];
+arr.toString(); // '1,2,,,,NaN,[object Object]'
+```
 
 # 常见问题
 
