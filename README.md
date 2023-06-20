@@ -1,36 +1,33 @@
-# 知识图谱
-- <b>JavaScript</b>
-    - [数据类型](./Javascript/dataType.md)
-    - [数组方法](./Javascript/array/index.md)
-    - [字符串方法](./Javascript/string.md)
-    - [对象方法]
-    - ES6
-        - [Set]
-        - [Map]
-        - [Proxy]
-        - [let]
-        - [const]
-        - [箭头函数]
-        - [`...`]
-        - [解构赋值]
-- <b>React</b>
-    - [生命周期]
-- <b>Vue</b>
-    - Vue2
-        - [生命周期](./Vue2/lifeCycle.md)
-    - Vue3
-        - [生命周期]
-    - Vuex
-    - Vue Router
-    - Jquery
-- <b>TypeScript</b>
-    - 联合类型
-    - 泛型
-    - 高级类
-- <b>NodeJS</b>
-- <b>浏览器</b>
-- <b>网络</b>
-- <b>HTML</b>
-- <b>CSS</b>
-- <b>JAVA</b>
-- <b>设计模式</b>
+### JavaScript
+
+- [数据类型](./JavaScript/date_type.md)
+- [作用域](./JavaScript/)
+- [Promise](./JavaScript/Promise/index.md)
+- [call]
+- [bind]
+- [apply]
+- [原型链]
+- [运算符]
+
+### CSS
+
+- [Box Model 盒子模型](./CSS/BoxModel/index.md)
+- [BoxSizing](./CSS/BoxSizing/index.md)
+- [Padding 内边距](./CSS/padding.md)
+
+### HTML
+
+- [语义化标签]
+
+### Vue2
+
+### Vue3
+
+### Java
+
+### 其它概念
+
+- [浏览器兼容问题]
+- [微前端]
+
+### 常用库
