@@ -28,7 +28,7 @@
 ### 其它概念
 
 - [浏览器兼容问题]
-- [微前端]
+- [micro frontend 微前端](./MicroFrontend/index.md)
 
 ### 常用库
 
