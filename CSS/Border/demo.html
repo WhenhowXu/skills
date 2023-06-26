@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border 边框</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 50px;
+        }
+
+        .box.box-dotted {
+            border: 1px dotted green;
+        }
+
+        .box.box-dashed {
+            border: 1px dashed green;
+        }
+
+        .box.box-solid {
+            border: 1px solid green;
+        }
+
+        .box.box-double {
+            border-style: double;
+            border-width: 3px;
+            border-color: red;
+        }
+
+        .box-groove {
+            border: 6px groove lightblue;
+        }
+
+        .box-ridge {
+            border: 6px ridge lightblue;
+        }
+
+        .box-inset {
+            border: 6px inset lightblue;
+        }
+
+        .box-outset {
+            border: 6px outset lightblue;
+        }
+
+        .box-more {
+            border: 6px outset lightblue;
+            border-left-style: dashed;
+            border-right-style: solid;
+            border-bottom-style: inset;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>1、点线边框</h3>
+    <div class="box box-dotted"></div>
+    <h3>2、虚线边框</h3>
+    <div class="box box-dashed"></div>
+    <h3>3、实线边框</h3>
+    <div class="box box-solid"></div>
+    <h3>4、双层边框</h3>
+    <div class="box box-double"></div>
+    <h3>5、3D沟槽边框</h3>
+    <div class="box box-groove"></div>
+    <h3>6、3D沟脊边框</h3>
+    <div class="box box-ridge"></div>
+    <h3>7、3D沟嵌入边框</h3>
+    <div class="box box-inset"></div>
+    <h3>8、3D沟突出边框</h3>
+    <div class="box box-outset"></div>
+    <h3>9、各方向不同风格</h3>
+    <div class="box box-more"></div>
+</body>
+
+</html>

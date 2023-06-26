@@ -14,6 +14,8 @@
 - [Box Model 盒子模型](./CSS/BoxModel/index.md)
 - [BoxSizing](./CSS/BoxSizing/index.md)
 - [Padding 内边距](./CSS/padding.md)
+- [FontSize 文字大小](./CSS/FontSize/index.md)
+- [Border 边框](./CSS/)
 
 ### HTML
 
