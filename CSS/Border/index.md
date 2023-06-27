@@ -1,12 +1,13 @@
-### border-style 
+### border-style 边框形式
+
 - solid 实线
 - dashed 虚线
 - dotted 点线
-- groove 3d沟槽
-- ridge 3d脊边框
-- inset 3d内嵌
-- outside 3d突出
+- groove 3d 沟槽
+- ridge 3d 脊边框
+- inset 3d 内嵌
+- outside 3d 突出
 
-### border-width
+### border-width 边框宽度
 
-### border-color
+### border-color 边框颜色
