@@ -11,3 +11,6 @@
 ### border-width 边框宽度
 
 ### border-color 边框颜色
+
+### 注意
+- [绘制三角形](./demo1.html)

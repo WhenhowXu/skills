@@ -13,7 +13,7 @@
 - `activated` 被 keep-alive 缓存的组件激活时调用
 - `deactivated` 被 keep-alive 缓存的组件失活时调用
 
-### 服务渲染不被调用的函数
+### 服务端渲染不被调用的生命周期
 
 - `beforeMount`
 - `mounted`
@@ -33,7 +33,7 @@ parent beforeMount
 child beforeCreate
 child created
 child beforeMount
-<!-- 不保证mounted执行顺序 -->
+// 不保证mounted执行顺序
 child mounted
 parent mounted
 ```
@@ -43,7 +43,7 @@ parent mounted
 ```js
 parent beforeUpdate
 child beforeUpdate
-<!-- 不保证updated执行顺序 -->
+// 不保证updated执行顺序
 child updated
 parent updated
 ```
