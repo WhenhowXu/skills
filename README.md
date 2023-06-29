@@ -21,8 +21,13 @@
 
 - [语义化标签]
 - [TabIndex](./HTML/TabIndex/index.md)
+- [行内元素和块级元素]
 
 ### Vue2
+- [provide/inject](./Vue2/provideInject.md)
+- [slot 插槽](./Vue2/slot.md)
+- [directives 指令](./Vue2/directives/vModelDemo.html)
+- [生命周期](./Vue2/lifeCycle.md)
 
 ### Vue3
 

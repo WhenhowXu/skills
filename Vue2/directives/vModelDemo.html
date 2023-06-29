@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model简单实现</title>
+</head>
+
+<body>
+    <input placeholder="请输入名称" id="username" />
+    <p>名称：<span id="uName"></span></p>
+    <script>
+        let obj = {};
+        Object.defineProperty(obj, 'username', {
+            get: function (val) {
+                console.log('取值')
+            },
+            set: function (val) {
+                document.getElementById('uName').innerText = val
+            }
+        })
+        document.getElementById('username').addEventListener('keyup', function (e) {
+            obj.username = e.target.value
+        })
+    </script>
+</body>
+
+</html>
