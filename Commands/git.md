@@ -1,3 +1,11 @@
+### git log
+
+- `git log --graph --oneline --all`: 可视化命令查看所有线上历史提交记录
+
+### git cloneq
+
+- `git clone --depth 1  --branch [branchName] [https://github.com/xx.git]`:克隆某个指定分支的最近一次 commit
+
 ### 修改已提交 commit 消息
 
 - 1、`git rebase -i HEAD~3` 将要修改的记录把 pick 修改为 edit

@@ -1,0 +1,4 @@
+- `nginx`:启动
+- `nginx -s reload`:重启
+- `nginx -s stop`:停止
+- `nginx -s quit`:停止
