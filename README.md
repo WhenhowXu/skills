@@ -33,9 +33,10 @@
 - [slot 插槽](./Vue2/slot.md)
 - [directives 指令](./Vue2/directives/vModelDemo.html)
 - [生命周期](./Vue2/lifeCycle.md)
-- [filter](./Vue2/)
-- [单向数据流]
-- 
+- [filter](./Vue2/filter/index.md)
+- [单向数据流](./Vue2/unidirectionalDataFlow/index.md)
+- [组件之间数据通信](./Vue2/comminication/index.md)
+- [mixin 混入](./Vue2/mixin/index.md)
 
 ### Vue3
 
