@@ -3,15 +3,16 @@
 - JavaScript 基础
 
   - [数据类型](./JavaScript/date_type.md)
-  - [作用域](./JavaScript/)
+  - [作用域](./JavaScript/scope.md)
   - [Promise](./JavaScript/Promise/index.md)
   - [this](./JavaScript/this.md)
   - [call\bind\apply](./JavaScript/callBindApply.md)
   - [原型链、继承](./JavaScript/protoType.md)
   - [运算符](./JavaScript/operator.md)
-  - [闭包]
-
-  - [排序]
+  - [浮点计算精确度问题]
+  - [闭包](./JavaScript/clusure.md)
+  - [设计模式](./JavaScript/designPatterns/index.md)
+  - 排序
     - 插入排序
     - 快速排序
     - 冒泡排序
@@ -20,6 +21,8 @@
   - `exec`捕获
 
 ### TypeScript
+
+- 泛型
 
 ### CSS
 
@@ -52,8 +55,6 @@
 - [provide/inject](./Vue2/provideInject.md)
 
 ### Vue3
-
-### Java
 
 ### 其它概念
 
