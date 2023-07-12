@@ -78,6 +78,7 @@ console.log(obj.name); // xiao huang
 ```
 
 - 箭头函数没有自己的 this，它的 this 是上级作用域中 this，而且这个 this 是固定的，无法改变
+
 - 普通函数中 this 指的是其调用者，严格模式下没调用者，this 为 undefined
 
 ```js
