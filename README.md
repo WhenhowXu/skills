@@ -9,7 +9,6 @@
   - [call\bind\apply](./JavaScript/callBindApply.md)
   - [原型链、继承](./JavaScript/protoType.md)
   - [运算符](./JavaScript/operator.md)
-  - [浮点计算精确度问题]
   - [闭包](./JavaScript/clusure.md)
   - [设计模式](./JavaScript/designPatterns/index.md)
   - 排序
@@ -18,7 +17,11 @@
     - 冒泡排序
 
 - 正则
+
   - `exec`捕获
+
+- Javascript 中遇到的问题
+  - [浮点计算精确度问题](./JavaScript/problerms/floatCalculate.md)
 
 ### TypeScript
 
@@ -41,7 +44,6 @@
 - [TabIndex](./HTML/TabIndex/index.md)
 - [行内元素和块级元素](./HTML/blockInline/index.md)
 - [href 和 src 得区别](./HTML/hrefAndSrc/index.md)
--
 
 ### Vue2
 
@@ -72,3 +74,5 @@
 - [Git](./Commands/Git.md)
 - [Nginx](./Commands/Nginx/index.md)
 - [Markdown](./Tools/markdown/index.md)
+- [Docker]
+- [NodeJS]
