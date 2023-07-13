@@ -11,10 +11,7 @@
   - [运算符](./JavaScript/operator.md)
   - [闭包](./JavaScript/clusure.md)
   - [设计模式](./JavaScript/designPatterns/index.md)
-  - 排序
-    - 插入排序
-    - 快速排序
-    - 冒泡排序
+  - [排序](./JavaScript/array/sort/index.md)
 
 - 正则
 
