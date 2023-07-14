@@ -1,24 +1,6 @@
-### JavaScript
+### [JavaScript](./JavaScript/index.md)
 
-- JavaScript 基础
-
-  - [数据类型](./JavaScript/date_type.md)
-  - [作用域](./JavaScript/scope.md)
-  - [Promise](./JavaScript/Promise/index.md)
-  - [this](./JavaScript/this.md)
-  - [call\bind\apply](./JavaScript/callBindApply.md)
-  - [原型链、继承](./JavaScript/protoType.md)
-  - [运算符](./JavaScript/operator.md)
-  - [闭包](./JavaScript/clusure.md)
-  - [设计模式](./JavaScript/designPatterns/index.md)
-  - [排序](./JavaScript/array/sort/index.md)
-
-- 正则
-
-  - `exec`捕获
-
-- Javascript 中遇到的问题
-  - [浮点计算精确度问题](./JavaScript/problerms/floatCalculate.md)
+### Tools
 
 ### TypeScript
 
@@ -58,6 +40,7 @@
 ### 其它概念
 
 - [浏览器兼容问题]
+- [跨域]
 - [micro frontend 微前端](./MicroFrontend/index.md)
 
 ### 常用库

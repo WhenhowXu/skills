@@ -1,11 +1,11 @@
 ### `v-bind`
 
-> 动态绑定一个或者多个attribute
-- 修饰符
-    + .prop - 作为一个 DOM property 绑定而不是作为 attribute 绑定。(差别在哪里？)
-    + .camel - (2.1.0+) 将 kebab-case attribute 名转换为 camelCase。(从 2.1.0 开始支持)
-    + .sync (2.3.0+) 语法糖，会扩展成一个更新父组件绑定值的 v-on 侦听器
+> 动态绑定一个或者多个 attribute
 
+- 修饰符
+  - .prop - 作为一个 DOM property 绑定而不是作为 attribute 绑定。(差别在哪里？)
+  - .camel - (2.1.0+) 将 kebab-case attribute 名转换为 camelCase。(从 2.1.0 开始支持)
+  - .sync (2.3.0+) 语法糖，会扩展成一个更新父组件绑定值的 v-on 侦听器
 
 ### `v-model`
 
@@ -16,7 +16,7 @@
   - .lazy - 取代 input 监听 change 事件
   - .number - 输入字符串转为有效的数字
   - .trim - 输入首尾空格过滤
-- [v-model简单实现](./vModelDemo.html)
+- [v-model 简单实现](./vModelDemo.html)
 
 ### `v-once`
 
@@ -29,3 +29,5 @@
 ### `v-pre`
 
 > 跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。
+
+### 自定义指令
