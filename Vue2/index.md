@@ -1,15 +1,8 @@
-### Vue
-> 是一套用于构建用户界面的渐进式框架
-- <b>渐进式</b> 没有太多的限制，可以和很好的和一些第三方库结合起来使用
-
-### api
-- <b>filter</b> 过滤器，可被用于一些常见的文本格式化。
-    1、双花括号插值和 v-bind 表达式 (后者从 2.1.0+ 开始支持)；
-    2、过滤器可以串联：`{{ message | filterA | filterB }}`；
-    3、可接收多个参数：`{{ message | filterA('arg1', arg2) }}`；
-    4、可以定义全局和组件内过滤器，两重命优先取组件内。
-- <b>nextTick</b> 在下次DOM更新循环结束之后执行延迟回调
-- <b>mixin</b> 混入 可复用功能，
-    1、数据对象在内部会进行递归合并，并在发生冲突时以组件数据优先
-    2、同名钩子函数将合并为一个数组，因此都将被调用
-    3、尽量不使用全局混入
+- [生命周期](./lifeCycle.md)
+- [单向数据流](./unidirectionalDataFlow/index.md)
+- [组件之间数据通信](./comminication/index.md)
+- [directives 指令](./directives/vModelDemo.html)
+- [filter 过滤器](./filter/index.md)
+- [mixin 混入](./mixin/index.md)
+- [slot 插槽](./slot.md)
+- [provide/inject](./provideInject.md)

@@ -1,41 +1,11 @@
-### [JavaScript](./JavaScript/index.md)
-
-### Tools
-
-### TypeScript
-
-- 泛型
-
-### CSS
-
-- css 基础
-  - [Position 定位](./CSS/Position/index.md)
-  - [Box Model 盒子模型](./CSS/BoxModel/index.md)
-  - [BoxSizing](./CSS/BoxSizing/index.md)
-  - [Padding 内边距](./CSS/padding.md)
-  - [FontSize 文字大小](./CSS/FontSize/index.md)
-  - [Border 边框](./CSS/Border/index.md)
-
-### HTML
-
-- [HTML5]
-- [语义化标签](./HTML/tag/index.md)
-- [TabIndex](./HTML/TabIndex/index.md)
-- [行内元素和块级元素](./HTML/blockInline/index.md)
-- [href 和 src 得区别](./HTML/hrefAndSrc/index.md)
-
-### Vue2
-
-- [生命周期](./Vue2/lifeCycle.md)
-- [单向数据流](./Vue2/unidirectionalDataFlow/index.md)
-- [组件之间数据通信](./Vue2/comminication/index.md)
-- [directives 指令](./Vue2/directives/vModelDemo.html)
-- [filter 过滤器](./Vue2/filter/index.md)
-- [mixin 混入](./Vue2/mixin/index.md)
-- [slot 插槽](./Vue2/slot.md)
-- [provide/inject](./Vue2/provideInject.md)
-
-### Vue3
+- [JavaScript](./JavaScript/index.md)
+- [Vue2](./Vue2/index.md)
+- [Vue3](./Vue3/index.md)
+- React
+- TypeScript
+- HTML
+- CSS
+- Tools
 
 ### 其它概念
 
