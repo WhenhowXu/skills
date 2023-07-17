@@ -23,7 +23,7 @@
 
 - [作用域](./scope.md)
 - [this 关键字](./function/this.md)
-- [闭包](./JavaScript/clusure.md)
+- [闭包](./clusure.md)
 - [call\bind\apply](./JavaScript/callBindApply.md)
 
 ### Array 数组
@@ -40,7 +40,17 @@
 
 ### 模块化编程
 
+- CommonJS
+- CMD
+- AMD
+
 ### 其它
 
 - [原型链、继承](./JavaScript/protoType.md)
 - [设计模式](./JavaScript/designPatterns/index.md)
+
+### 元素
+
+- [获取元素]
+- [元素滚动]
+- [元素事件绑定]
