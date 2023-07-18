@@ -38,7 +38,7 @@
 
 - [数组基础方法](./array/base.md)
 - [排序](./array/sort/index.md)
-- [去重]()
+- [去重](./array/removeDuplicate.md)
 - [遍历]()
 - [关键字搜索](./array/search/index.js)
 - [类数组]()
@@ -76,3 +76,5 @@
 - [元素事件绑定]()
 
 ### [垃圾回收机制](https://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
+
+- [Event Loop]()

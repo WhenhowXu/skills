@@ -1,5 +1,6 @@
 ### CSS 基础
 
+- [background 背景](./background/index.md)
 - rem、em、px 的区别
 
   - `px`(Pixel):像素，相对长度单位，相对于显示器屏幕分辨率而言的`px = 1/dpi(英寸)`
