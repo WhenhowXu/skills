@@ -6,3 +6,4 @@
 - [mixin 混入](./mixin/index.md)
 - [slot 插槽](./slot.md)
 - [provide/inject](./provideInject.md)
+- [jsx]

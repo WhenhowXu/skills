@@ -1,5 +1,11 @@
 - [HTML5]
 
+### 标签
+
+- script
+- style
+- link
+
 ### HTML 标签属性
 
 - `class` 样式类名
