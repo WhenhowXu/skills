@@ -7,3 +7,6 @@
 - [slot 插槽](./slot.md)
 - [provide/inject](./provideInject.md)
 - [jsx]
+- [data]()
+  - data 为什么一定要是一个函数
+    > 保证状态指向不同的引用，维持组件的唯一性

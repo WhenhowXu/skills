@@ -67,7 +67,7 @@
 ### 其它
 
 - [原型链、继承](./JavaScript/protoType.md)
-- [设计模式](./JavaScript/designPatterns/index.md)
+- [设计模式](./designPatterns/index.md)
 
 ### 元素
 
