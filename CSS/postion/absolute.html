@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        .box {
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .container {
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+
+        .container.relative {
+            position: relative;
+
+        }
+
+        .container.absolute {
+            position: absolute;
+            right: 1000px;
+            top: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">我上级没有设置定位的元素，相对body定位</div>
+    </div>
+    <div class="container relative">
+        <div class="box">父元素设置relative，我相对父元素定位</div>
+    </div>
+
+    <div class="container absolute">
+        <div class="box">父元素设置absolute我相对父元素定位</div>
+    </div>
+</body>
+
+</html>
