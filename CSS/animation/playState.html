@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sate</title>
+    <style>
+        .progress {
+            width: 300px;
+            height: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .progress-inner {
+            width: 0;
+            height: 100%;
+            background-color: red;
+        }
+
+        .progress-inner.infinite {
+            animation-name: progress 2s linear;
+            -webkit-animation: progress 2s linear;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">暂停</button>
+
+    <h3>循环播放</h3>
+    <div class="progress">
+        <div id="animation" class="progress-inner infinite"></div>
+    </div>
+    <script>
+        const btn = document.getElementById('btn');
+        let paused = false;
+        btn.onclick = function () {
+            paused = !paused;
+            const box = document.getElementById('animation')
+            if (box) {
+                btn.innerText = paused ? '播放' : '暂停'
+                box.style.animationPlayState = paused ? 'paused' : 'running'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-iteration-count</title>
+    <style>
+        .progress {
+            width: 300px;
+            height: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .progress-inner {
+            width: 0;
+            height: 100%;
+            background-color: red;
+        }
+
+        .progress-inner.quick {
+            animation-name: progress 2s linear;
+            -webkit-animation: progress 2s linear;
+
+        }
+
+        .progress-inner.middle {
+            animation-name: progress 2s linear;
+            -webkit-animation: progress 2s linear;
+            animation-iteration-count: 5;
+            -webkit-animation-iteration-count: 5;
+        }
+
+        .progress-inner.slow {
+            animation-name: progress 2s linear;
+            -webkit-animation: progress 2s linear;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>默认播放1次</h3>
+    <div class="progress progress">
+        <div class="progress-inner quick"></div>
+    </div>
+
+    <h3>播放5次</h3>
+    <div class="progress">
+        <div class="progress-inner middle"></div>
+    </div>
+
+    <h3>循环播放</h3>
+    <div class="progress">
+        <div class="progress-inner slow"></div>
+    </div>
+</body>
+
+</html>

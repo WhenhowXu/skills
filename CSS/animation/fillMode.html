@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Mode</title>
+    <style>
+        .progress {
+            width: 300px;
+            height: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .progress-inner {
+            width: 0;
+            height: 100%;
+            background-color: red;
+            animation-name: progress 2s;
+            -webkit-animation: progress 2s;
+        }
+
+        .progress-inner.forwards {
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        .progress-inner.backwards {
+            animation-fill-mode: backwards;
+            -webkit-animation-fill-mode: backwards;
+        }
+
+        .progress-inner.both {
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+        }
+
+        .progress-inner.both2 {
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+            animation-direction: alternate;
+            -webkit-animation-direction: alternate;
+            animation-iteration-count: 2;
+            -webkit-animation-iteration-count: 2;
+        }
+
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>默认none</h3>
+    <div class="progress progress">
+        <div class="progress-inner none"></div>
+    </div>
+
+    <h3>forwards</h3>
+    <div class="progress">
+        <div class="progress-inner forwards"></div>
+    </div>
+
+    <h3>backwards</h3>
+    <div class="progress">
+        <div class="progress-inner backwards"></div>
+    </div>
+
+    <h3>both</h3>
+    <div class="progress">
+        <div class="progress-inner both"></div>
+    </div>
+
+    <h3>both 执行2次</h3>
+    <div class="progress">
+        <div class="progress-inner both2"></div>
+    </div>
+</body>
+
+</html>

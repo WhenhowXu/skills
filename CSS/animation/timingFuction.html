@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-timing-function</title>
+    <style>
+        .progress {
+            width: 300px;
+            height: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .progress-inner {
+            width: 0;
+            height: 100%;
+            background-color: red;
+        }
+
+        .progress-inner.linear {
+            animation-name: progress 2s linear;
+            -webkit-animation: progress 2s linear;
+        }
+
+        .progress-inner.ease {
+            animation-name: progress 2s ease;
+            -webkit-animation: progress 2s ease;
+        }
+
+        .progress-inner.ease-in {
+            animation-name: progress 2s ease-in;
+            -webkit-animation: progress 2s ease-in;
+        }
+
+        .progress-inner.ease-out {
+            animation-name: progress 2s ease-out;
+            -webkit-animation: progress 2s ease-out;
+        }
+
+        .progress-inner.ease-in-out {
+            animation-name: progress 2s ease-in-out;
+            -webkit-animation: progress 2s ease-in-out;
+        }
+
+        .progress-inner.cubic-bezier {
+            animation-name: progress 2s cubic-bezier(1, 0, 1, 0);
+            -webkit-animation: progress 2s cubic-bezier(1, 0, 1, 0);
+        }
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>linear</h3>
+    <div class="progress progress">
+        <div class="progress-inner linear"></div>
+    </div>
+
+    <h3>ease</h3>
+    <div class="progress">
+        <div class="progress-inner ease"></div>
+    </div>
+
+    <h3>linear</h3>
+    <div class="progress">
+        <div class="progress-inner ease-in"></div>
+    </div>
+
+    <h3>ease-out</h3>
+    <div class="progress">
+        <div class="progress-inner ease-out"></div>
+    </div>
+
+    <h3>ease-in-out</h3>
+    <div class="progress">
+        <div class="progress-inner ease-in-out"></div>
+    </div>
+
+    <h3>cubic-bezier</h3>
+    <div class="progress">
+        <div class="progress-inner cubic-bezier"></div>
+    </div>
+</body>
+
+</html>
