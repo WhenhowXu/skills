@@ -72,17 +72,14 @@ keyIterator.next(); // {value: 'a',done:false}
 keyIterator.next(); // {value: undefined,done:true}
 ```
 
-- map
-- shift | pop
+- map 遍历
+- shift | pop 删除数组第一、末尾项
+- unshift | push 数组第一前、末尾添加新项
 - reduce | reduceRight
-- reverse 反转
+- reverse | toReversed 反转
 - slice
 - some
-- sort
-- splice
-- toReversed
-- toSorted
-- toSpliced
+- sort | toSorted
+- splice | toSpliced
 - toString
-- unshift | push
 - with

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .toggle-button.active {
+            color: blue;
+        }
+
+        .flex-container {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+
+        .flex-container.nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .flex-container.wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-container.wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-item {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            margin: 12px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>flex-wrap</h3>
+    <button class="toggle-button active">no-wrap</button>
+    <button class="toggle-button">wrap</button>
+    <button class="toggle-button">wrap-reverse</button>
+
+    <div class="flex-container no-wrap" id="flexContainer">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+    </div>
+    <script>
+        (function () {
+            const buttons = document.getElementsByClassName('toggle-button')
+            const flexContainer = document.getElementById('flexContainer');
+
+            Array.from(buttons).forEach(function (item, index) {
+                item.addEventListener('click', function () {
+                    const activeItem = document.querySelector('.toggle-button.active')
+                    if (activeItem) {
+                        activeItem.classList.remove('active')
+                    }
+                    buttons[index].classList.add('active')
+                    const _class = item.innerText;
+                    flexContainer.className = ['flex-container', _class].join(' ');
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

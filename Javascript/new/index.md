@@ -13,10 +13,10 @@ Dog.prototype.eat = function () {
   console.log(this.name + "正在吃饭");
 };
 
-function customeNew(Contructor, ...args) {
+function customeNew(Constructor, ...args) {
   let obj = {};
-  obj.__proto__ = Contructor.prototype;
-  obj.apply(Contructor, args);
+  obj.__proto__ = Constructor.prototype;
+  obj.apply(Constructor, args);
   return obj;
 }
 ```

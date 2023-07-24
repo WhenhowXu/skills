@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面a</title>
+</head>
+
+<body>
+    <div>我是a页面</div>
+    <input id="input"></input>
+    <button id="sendBtn">发送消息</button>
+    <iframe src="http://127.0.0.1:4000" id="bIframe"></iframe>
+    <script>
+        window.onload = function () {
+            const iframe = document.getElementById('bIframe');
+            const btn = document.getElementById('sendBtn');
+            btn.addEventListener('click', function () {
+                const val = document.getElementById('input').value;
+                iframe.contentWindow.postMessage(val, 'http://127.0.0.1:4000')
+            })
+        }
+    </script>
+</body>
+
+</html>

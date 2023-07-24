@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b页面</title>
+</head>
+
+<body>
+    <div>我是b本页面</div>
+    <div>
+        <label>来源自本页面的消息:</label>
+        <p id="message"></p>
+    </div>
+    <script>
+        window.onload = function () {
+            const messageP = document.getElementById('message')
+            window.addEventListener('message', function (e) {
+                console.log(e, '接受到其它页面发送过来的消息')
+                messageP.innerHTML = "从" + e.origin + "收到消息： " + e.data;
+            });
+        }
+    </script>
+</body>
+
+</html>
