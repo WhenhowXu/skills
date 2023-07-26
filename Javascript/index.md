@@ -20,7 +20,9 @@
 
 ### String 字符串
 
-- 回文字符串
+- [回文字符串]()
+
+### RegExp 正则
 
 ### Function 函数
 
@@ -53,7 +55,7 @@
 
 ### Map | WeakMap
 
-### Set
+### Set | WeakSet
 
 ### Proxy
 
@@ -79,3 +81,4 @@
 - [模块化编程]()
 - [严格模式]()
 - [BOM | DOM](./DOM&BOM/index.md)
+- [虚拟列表]()
