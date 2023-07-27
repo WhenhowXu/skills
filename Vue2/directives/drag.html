@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue2 自定义指令实现拖拽效果</title>
+    <script src="../public/js/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        #app {
+            height: 100%;
+        }
+
+        #app {
+            background-color: lavender;
+        }
+
+        .draggable-box {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            position: absolute;
+            left: 100px;
+            top: 300px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        .container {
+            position: fixed;
+            top: 32px;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <input v-model="message" />
+        <div class="draggable-box" v-draggable>1</div>
+        <!-- <div class="container">
+            <div class="draggable-box" v-draggable="{getContainer: ()=>document?.querySelector('.container')}">2</div>
+        </div> -->
+    </div>
+    <script>
+        (function () {
+            const dragDirective = {
+                bind(el, binding, vNode) {
+                    const noop = function () { }
+                    const {
+                        dragStart = noop,
+                        dragMove = noop,
+                        dragEnd = noop,
+                        getContainer = () => document?.body
+                    } = binding.value || {};
+                    el.style.cursor = 'pointer';
+                    const on = function (element, event, handler, useCapture = false) {
+                        if (element?.addEventListener) {
+                            return element.addEventListener(event, handler, useCapture)
+                        }
+                        if (element?.attachEvent) {
+                            return element.attachEvent('on' + event, handler);
+                        }
+                    }
+
+                    const off = function (element, event, handler, useCapture = false) {
+                        if (element?.removeEventListener) {
+                            return element.removeEventListener(event, handler, useCapture)
+                        }
+                        if (element?.detachEvent) {
+                            return element.detachEvent('on' + event, handler)
+                        }
+                    };
+                    let dragData = {
+                        x: null,
+                        y: null,
+                        dragX: null,
+                        dragY: null,
+                        dragging: false // 是否正在拖拽
+                    };
+
+                    const handleMove = function (event) {
+                        if (!dragData.dragging) return;
+                        const referenceParent = el.offsetParent || document.body;
+                        const distance = { x: event.clientX, y: event.clientY },
+                            diffDistance = { x: distance.x - dragData.dragX, y: distance.y - dragData.dragY }
+                        dragData.x += diffDistance.x;
+                        dragData.y += diffDistance.y
+                        dragData.dragX = distance.x
+                        dragData.dragY = distance.y
+                        let minLeft = 0;
+                        let maxLeft = document.body.clientWidth - el.clientWidth;
+                        let minTop = 0;
+                        let maxTop = document.body.clientHeight - el.clientHeight;
+                        if (dragData.x < minLeft) {
+                            dragData.x = minLeft;
+                        } else if (dragData.x > maxLeft) {
+                            dragData.x = maxLeft;
+                        }
+                        if (dragData.y < minTop) {
+                            dragData.y = minTop;
+                        } else if (dragData.y > maxTop) {
+                            dragData.y = maxTop;
+                        }
+                        if (typeof dragData.x === 'number') {
+                            el.style.left = dragData.x + 'px';
+                        }
+                        if (typeof dragData.y === 'number') {
+                            el.style.top = dragData.y + 'px';
+                        }
+                        // dragData.x = event.x < 0 ? 0 : Math.min(event.x, maxLeft)
+                        // dragData.y = event.y < 0 ? 0 : Math.min(event.y, maxTop)
+                        dragMove(dragData);
+                    }
+
+                    const handleMoveEnd = function () {
+                        dragData.dragging = false;
+                        dragEnd(dragData);
+                        off(window, 'mousemove', handleMove);
+                        off(window, 'mouseup', handleMoveEnd);
+                    }
+
+                    function handleMouseStart(event) {
+                        const rect = el.getBoundingClientRect();
+                        dragData.x = rect.x || rect.left;
+                        dragData.y = rect.y || rect.top;
+                        const distance = {
+                            x: event.clientX,
+                            y: event.clientY
+                        };
+                        dragData.dragX = distance.x;
+                        dragData.dragY = distance.y;
+                        dragData.dragging = true;
+
+                        dragStart();
+                        on(window, 'mousemove', handleMove);
+                        on(window, 'mouseup', handleMoveEnd);
+                    }
+
+                    on(el, 'mousedown', handleMouseStart);
+                },
+                update(el) { },
+                unbind(el, binding) { }
+            }
+            new Vue({
+                el: '#app',
+                directives: {
+                    draggable: dragDirective
+                },
+                data() {
+                    return { message: 'Hello Hao!' }
+                }
+            })
+
+        })()
+    </script>
+
+</body>
+
+</html>

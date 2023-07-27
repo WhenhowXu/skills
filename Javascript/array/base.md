@@ -57,7 +57,7 @@
 - flat
 - flatMap
 - flatten
-- forEach
+- forEach 无法跳出循环
 - includes
 - indexOf | lastIndexOf
 - join
