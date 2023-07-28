@@ -49,10 +49,10 @@
     <div id="app">
         <p>{{message}}</p>
         <input v-model="message" />
-        <div class="draggable-box" v-draggable>1</div>
-        <!-- <div class="container">
+        <!-- <div class="draggable-box" v-draggable>1</div> -->
+        <div class="container">
             <div class="draggable-box" v-draggable="{getContainer: ()=>document?.querySelector('.container')}">2</div>
-        </div> -->
+        </div>
     </div>
     <script>
         (function () {
@@ -88,7 +88,9 @@
                         y: null,
                         dragX: null,
                         dragY: null,
-                        dragging: false // 是否正在拖拽
+                        dragging: false,
+                        offsetX: undefined,
+                        offsetY: undefined,
                     };
 
                     const handleMove = function (event) {
@@ -99,26 +101,32 @@
                         dragData.x += diffDistance.x;
                         dragData.y += diffDistance.y
                         dragData.dragX = distance.x
-                        dragData.dragY = distance.y
+                        dragData.dragY = distance.y;
+                        dragData.offsetX = el.offsetX;
+                        dragData.offsetY = el.offsetY;
                         let minLeft = 0;
-                        let maxLeft = document.body.clientWidth - el.clientWidth;
+                        let maxLeft = referenceParent.clientWidth - el.clientWidth;
                         let minTop = 0;
-                        let maxTop = document.body.clientHeight - el.clientHeight;
-                        if (dragData.x < minLeft) {
-                            dragData.x = minLeft;
-                        } else if (dragData.x > maxLeft) {
-                            dragData.x = maxLeft;
+                        let maxTop = referenceParent.clientHeight - el.clientHeight;
+                        let _left = distance.x ?? 0 + dragData.offsetX,
+                            _top = distance.y ?? 0 + dragData.offsetY;
+                        console.log(_left, _top, 'lll')
+
+                        if (_left < minLeft) {
+                            _left = minLeft;
+                        } else if (_left > maxLeft) {
+                            _left = maxLeft;
                         }
-                        if (dragData.y < minTop) {
-                            dragData.y = minTop;
-                        } else if (dragData.y > maxTop) {
-                            dragData.y = maxTop;
+                        if (_top < minTop) {
+                            _top = minTop;
+                        } else if (_top > maxTop) {
+                            _top = maxTop;
                         }
-                        if (typeof dragData.x === 'number') {
-                            el.style.left = dragData.x + 'px';
+                        if (typeof _left === 'number') {
+                            el.style.left = _left + 'px';
                         }
-                        if (typeof dragData.y === 'number') {
-                            el.style.top = dragData.y + 'px';
+                        if (typeof _top === 'number') {
+                            el.style.top = _top + 'px';
                         }
                         // dragData.x = event.x < 0 ? 0 : Math.min(event.x, maxLeft)
                         // dragData.y = event.y < 0 ? 0 : Math.min(event.y, maxTop)

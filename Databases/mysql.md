@@ -1,0 +1,5 @@
+- `mysql -u root -p` 密码登录数据库
+- `create database [databaseName]` 创建数据库
+- `drop database [databaseName]` 删除数据库
+- `use [databaseName]` 选择数据库
+- `show databases` 显示所有数据库
