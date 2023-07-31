@@ -104,14 +104,13 @@
                         dragData.dragY = distance.y;
                         dragData.offsetX = el.offsetX;
                         dragData.offsetY = el.offsetY;
-                        let minLeft = 0;
-                        let maxLeft = referenceParent.clientWidth - el.clientWidth;
-                        let minTop = 0;
-                        let maxTop = referenceParent.clientHeight - el.clientHeight;
-                        let _left = distance.x ?? 0 + dragData.offsetX,
-                            _top = distance.y ?? 0 + dragData.offsetY;
-                        console.log(_left, _top, 'lll')
-
+                        let minLeft = referenceParent.offsetLeft;
+                        let maxLeft = referenceParent.offsetLeft + referenceParent.offsetWidth;
+                        let minTop = referenceParent.offsetTop;
+                        let maxTop = referenceParent.offsetTop + referenceParent.offsetHeight;
+                        console.log(minLeft, maxLeft, minTop, maxTop)
+                        let _left = distance.x ?? 0 + dragData.dragX,
+                            _top = distance.y ?? 0 + dragData.dragY;
                         if (_left < minLeft) {
                             _left = minLeft;
                         } else if (_left > maxLeft) {
@@ -128,8 +127,6 @@
                         if (typeof _top === 'number') {
                             el.style.top = _top + 'px';
                         }
-                        // dragData.x = event.x < 0 ? 0 : Math.min(event.x, maxLeft)
-                        // dragData.y = event.y < 0 ? 0 : Math.min(event.y, maxTop)
                         dragMove(dragData);
                     }
 

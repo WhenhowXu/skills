@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>鼠标跟随</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        #to_top {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 4px;
+            font-size: 12px;
+            text-align: center;
+            background: orange;
+            position: absolute;
+            cursor: pointer;
+            color: #fff
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const oTop = document.getElementById("to_top");
+            document.onmousemove = function (evt) {
+                const oEvent = evt || window.event,
+                    sL = document.documentElement.scrollLeft || document.body.scrollLeft,
+                    sT = document.documentElement.scrollTop || document.body.scrollTop;
+                oTop.style.left = oEvent.clientX + sL + 10 + "px";
+                oTop.style.top = oEvent.clientY + sT + 10 + "px";
+            }
+        }
+    </script>
+</head>
+
+<body style="height:1000px;">
+    <div id="to_top">鼠标跟随</div>
+</body>
+
+</html>

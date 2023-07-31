@@ -1,4 +1,4 @@
-### Main
+### 主要知识点
 
 - [JavaScript](./JavaScript/index.md)
 - [Vue2](./Vue2/index.md)
@@ -23,14 +23,15 @@
 - `v-viewer`: _vue2 图片预览插件_
 - `vue-easy-print`:_打印_
 - `qrcode`: _二维码_
+- `draggable`: _拖拽库_
 
-### UI LIbraries
+### 前端常用 UI 库
 
 - `ant-design-vue`
 - `element-ui`
 - `vant`
 
-### Databases
+### 数据库知识
 
 - [Mysql](./Databases/mysql.md)
 - [MongoDB]()
@@ -65,3 +66,8 @@
 ### Back End
 
 - [高并发]()
+
+### 未归类
+
+- [DPR 设备像素比]()
+- [移动端 1px 问题]()
