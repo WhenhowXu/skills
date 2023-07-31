@@ -31,3 +31,24 @@
 > 跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。
 
 ### 自定义指令
+
+- 关键字高亮
+
+```js
+const handleHightLight = function (el, binding) {
+  const {
+    text,
+    keyWords,
+    hightLightStyle = "background:orange;color: #fff",
+  } = binding.value || {};
+  if (text && keyWords) {
+    el.innerHTML = text.replace(new RegExp(keyWords, "ig"), (a) => {
+      return `<span style=${hightLightStyle}>${a}</span>`;
+    });
+  }
+};
+const hightLight = {
+  bind: handleHightLight,
+  update: handleHightLight,
+};
+```

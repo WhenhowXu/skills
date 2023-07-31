@@ -6,7 +6,25 @@
 
 ## 变量
 
-- [变量提升]()
+- [变量提升]
+  - 使用 var 关键字命名的变量，在编译会自动放在前面，因而可以先调用，后面定义也不会报错
+  - 函数声明和其他声明一起出现时，函数声明高于一切
+  ```js
+  fn();
+  function fn() {
+    console.log("foo");
+  }
+  var foo = 2;
+  // 正常打印foo
+  ```
+  - 赋值语句不会将变量声明提升
+  ```js
+  foo();
+  var foo = function () {
+    console.log("foo");
+  };
+  // 报错 foo is not a function
+  ```
 
 ### 运算符、操作符
 
@@ -22,7 +40,9 @@
 
 - [回文字符串]()
 
-### RegExp 正则
+### [RegExp 正则表达式](./RegExp/index.md)
+
+- [修饰符]()
 
 ### Function 函数
 

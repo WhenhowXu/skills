@@ -22,10 +22,12 @@
 - `viewerjs`:_图片预览_
 - `v-viewer`: _vue2 图片预览插件_
 - `vue-easy-print`:_打印_
+- `qrcode`: _二维码_
 
 ### UI LIbraries
 
 - `ant-design-vue`
+- `element-ui`
 - `vant`
 
 ### Databases
@@ -58,6 +60,7 @@
 - [状态码]()
 - [简单请求 | 非简单请求]()
 - [三次握手 | 四次挥手]()
+- [Websocket 断线重连]()
 
 ### Back End
 
