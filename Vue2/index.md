@@ -23,4 +23,7 @@
 - `v-viewer` 图片预览
 - `vue-draggable-resizable` 拖拽
 - 富文本编辑：
+
   - `tinymce`
+
+- [vue 项目性能优化]()
