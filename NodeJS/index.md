@@ -50,3 +50,7 @@ server.listen(port, () => {
   - resolve
 - **events**
 - **`__dirname`**
+
+
+### 库
+- `jsonwebtoken`
