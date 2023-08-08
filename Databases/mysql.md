@@ -49,6 +49,8 @@
     SELECT * FROM runoob;
   ```
 
+  - `SHOW COLUMNS FROM [tableName]`: 展示表有哪些列
+
 - SQL 语句
 
   - WHERE
@@ -81,8 +83,32 @@
   ```
 
 - ORDER BY 排序
+  > 使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序排列
 - GROUP BY 分组
 - JOIN
   - INNER JOIN
   - LEFT JOIN
   - RIGHT JOIN
+- 事务
+
+  > 事务处理可以用来维护数据库的完整性，保证成批的 SQL 语句要么全部执行，要么全部不执行。只有使用了 Innodb 数据库引擎的数据库或表才支持事务
+
+  - BEGIN 开始一个事务
+  - ROLLBACK 事务回滚
+  - COMMIT 事务确认
+
+  ```sql
+    CREATE TABLE runoob_test(id int(5)) engine=innodb;
+
+    // 确认流程
+    BEGIN;
+    INSERT INTO runoob_test value(5);
+    COMMIT;
+    // 回滚流程
+     BEGIN;
+    INSERT INTO runoob_test value(5);
+    ROLLBACK;
+  ```
+
+- ALERT
+  > 用于修改数据库、表和索引等对象的结构
