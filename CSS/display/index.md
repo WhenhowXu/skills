@@ -1,0 +1,21 @@
+### display 值
+
+- `none` 元素不显示
+- `block` 块级元素
+- `inline` 默认，内联元素
+- `contents` 使元素 不产生任何框 ，因此不会渲染其背景 边框 和 内边距 ，但颜色 / 字体等继承的属性还是会对其子元素产生效果
+- `inline-block` 行内块元素
+- `list-item` 作为列表显示
+- `run-in` 根据上下文作为块级或者内联元素显示
+- `table` 块级表格 类似 table 前后有换行符
+- `inline-table` 内联表格 类似 table
+- `table-row-group` 作为一个或多个行的分组来显示（类似 tbody）
+- `table-header-group` 作为一个或多个行的分组来显示（类似 thead）
+- `table-footer-group` 作为一个或多个行的分组来显示（类似 tfoot）
+- `flow-root` 生成一个块级元素盒，其会建立一个新的块级格式化上下文，定义格式化上下文的根元素
+- `table-row` 作为一个表格行显示（类似 tr）
+- `table-column-group` 作为一个或多个列的分组来显示（类似 colgroup）
+- `table-column` 作为一个单元格列显示（类似 col）
+- `table-cell` 作为一个表格单元格显示（类似 td 和 th）
+- `table-caption` 作为一个表格标题显示（类似 caption）
+- `inherit` 继承

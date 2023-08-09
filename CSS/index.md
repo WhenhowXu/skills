@@ -1,6 +1,16 @@
+### CSS (Cascading Style Sheets)
+
+> 层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
+
+- 插入样式表的三种方法
+  - 外部样式表 link 标签引入
+  - 内部样式表 style 标签
+  - 内联样式
+
 ### CSS 基础
 
-- [display]()
+- [display](./display/index.md)
+- [visibility]()
 - [position](./postion/index.md)
   > 定位
 - [animation]()
@@ -37,6 +47,7 @@
 - [选择器](https://www.runoob.com/cssref/css-selectors.html)
 - [DPR]()
 - [清除浮动]()
+- [CSS 变量]()
 
 ### Libraries
 
