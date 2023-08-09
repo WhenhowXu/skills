@@ -26,9 +26,21 @@
 
 ### Number 数字
 
+- 数值范围 _(`Number.MAX_VALUE Number.MIN_VALUE`)_
+- [NaN](./number/nan.js) _(Not a Number 非数字)_
+- Infinity _(无穷)_
+- parseInt
+- parseFloat
+- isNaN
+- [isFinite](./number/isFinite.js) _(是否为正常的数值)_
+
 ### String 字符串
 
+- 模板字符串
 - [回文字符串]()
+- `btoa | atob` _(Base64 转码)_
+- 字符集
+- `\` _(转义)_
 
 ### RegExp 正则表达式
 
@@ -37,6 +49,8 @@
 
 ### Function 函数
 
+- [声明](./function/declare.md)
+- arguments
 - [作用域](./function/scope.md)
 - [this]()
 - [箭头函数]()
@@ -92,8 +106,7 @@
 - [模块化编程]()
 - [严格模式]()
 - [BOM | DOM](./DOM&BOM/index.md)
-- [虚拟列表]()
-  > 按需渲染，只渲染可视区域的数据
+- [虚拟列表]() _(按需渲染，只渲染可视区域的数据)_
 - [服务端渲染]()
 - [大前端]()
 - [加密方式]()
