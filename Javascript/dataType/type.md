@@ -1,7 +1,6 @@
 ### 基本数据类型
 
-- number
-  > 数字
+- number _(数字)_
 
 ```js
 let n = 1; // 字面量申明
@@ -11,20 +10,16 @@ console.log(typeof n); // number
 console.log(typeof m); // object
 ```
 
-- string
-  > 字符串
+- string _(字符串)_
 
 ```js
 let m = "123",
   n = new String(123);
 ```
 
-- boolean
-  > 布尔
-- undefined
-  > 未定义
-- null
-  > 空指针
+- boolean _(布尔)_
+- undefined _(未定义)_
+- null _(空指针)_
 
 ```js
 null == undefined; // true
@@ -33,8 +28,7 @@ undefined === undefined; // true
 null === null; // true
 ```
 
-- symbol
-  > 独一无二的值，最大的用法是用来定义对象的唯一属性名
+- symbol _(独一无二的值，最大的用法是用来定义对象的唯一属性名)_
   > Symbol 值作为属性名时，该属性是公有属性不是私有属性，可以在类的外部访问。但是不会出现在 for...in 、 for...of 的循环中，也不会被 Object.keys() 、 Object.getOwnPropertyNames() 返回。如果要读取到一个对象的 Symbol 属性，可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。
 
 ```js
@@ -65,17 +59,9 @@ Symbol.keyFor(s5); // j
 
 ### 引用数据类型
 
-- object
-  > 对象
-- function
-  > 函数
-- array
-  > 数组
-- date
-  > 日期
-- regexp
-  > 正则
+- object _(对象)_
+- function _(函数)_
+- array _(数组)_
+- date _(日期)_
+- regexp _(正则)_
 - bigint
-
-- String
-- Number

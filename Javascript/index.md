@@ -1,30 +1,20 @@
 ### 数据类型
 
-- [数据类型种类](./dataType/type.md)
-- [数据类型判断](./dataType/checkType.md)
-- [数据类型转换](./dataType/change.md)
+- [类型种类](./dataType/type.md)
+- [类型判断](./dataType/checkType.md)
+- [类型转换](./dataType/change.md)
 
-## 变量
+### 变量
 
-- [变量提升]
-  - 使用 var 关键字命名的变量，在编译会自动放在前面，因而可以先调用，后面定义也不会报错
-  - 函数声明和其他声明一起出现时，函数声明高于一切
-  ```js
-  fn();
-  function fn() {
-    console.log("foo");
-  }
-  var foo = 2;
-  // 正常打印foo
-  ```
-  - 赋值语句不会将变量声明提升
-  ```js
-  foo();
-  var foo = function () {
-    console.log("foo");
-  };
-  // 报错 foo is not a function
-  ```
+- [变量提升](./variate/index.md)
+- 动态类型
+
+### 语句
+
+- 条件语句 _(`if | if else if else | switch | a ? b : c`)_
+- 循环语句 _(`while | for | do while`)_
+- 标签 _(语句前面有标签，相当于定位符，用于跳转到程序的任意位置)_
+- `break | continue` _（[break 单独使用只能跳出内层循环，配合标签可以跳出特定的外层循环](./statements/break.js)）_
 
 ### 运算符、操作符
 
@@ -40,19 +30,17 @@
 
 - [回文字符串]()
 
-### [RegExp 正则表达式](./RegExp/index.md)
+### RegExp 正则表达式
 
 - [修饰符]()
+- [正则捕获]()
 
 ### Function 函数
 
-> 函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块
-
 - [作用域](./function/scope.md)
-- this 关键字
-  > 指向函数当时运行环境，箭头函数比较特殊，指向的是定义的环境
-- [箭头函数]
-- [自执行函数]
+- [this]()
+- [箭头函数]()
+- [自执行函数]()
 - [标签函数](./function/tagFunction.md)
 - [闭包](./function/clusure.md)
 - [call\bind\apply](./callBindApply.md)
@@ -65,8 +53,7 @@
 - [去重](./array/removeDuplicate.md)
 - [遍历](./array/ergodic.md)
 - [关键字搜索](./array/search/index.js)
-- 类数组
-  > 通过索引属性访问元素并且拥有 length 属性的对象
+- 类数组 _(通过索引属性访问元素并且拥有 length 属性的对象)_
 
 ### Date 日期
 
