@@ -1,8 +1,12 @@
 ### 数据类型
 
-- [类型种类](./dataType/type.md)
-- [类型判断](./dataType/checkType.md)
-- [类型转换](./dataType/change.md)
+- 类型种类 [D](./dataType/type.md)
+- 类型判断
+  - `Object.prototype.toString` _[D](./Object/prototype.toString.js)_
+  - `instance of`
+  - `typeof`
+  - `constructor`
+- 类型转换 [D](./dataType/change.md)
 
 ### 变量
 
@@ -44,7 +48,7 @@
 
 - `void` _(执行一个表达式，然后不返回任何值)_
 - `?.` [可选链操作符](./operator/optionalOperator.md)
-- `??` [空值判断](./operator/emptyJudge.md)
+- `??` 空值判断 _([details](./operators/emptyJudge.md))_
 - [浮点计算精确度问题](./problerms/floatCalculate.md)
 
 ### Object 对象
@@ -53,14 +57,14 @@
   - `keys` _(返回对象自身所有非继承属性名)_
   - `values` _(返回对象自身所有非继承属性名对应的值)_
   - `getOwnPropertyNames` _(返回对象自身所有属性名)_ _([details]())_
-  - `getOwnPropertyDescriptor`：_(获取某个属性的描述对象)_
-  - `defineProperty`：_(通过描述对象，定义某个属性)_
-  - `defineProperties`：_(通过描述对象，定义多个属性)_
-  - `preventExtensions`：_(防止对象扩展)_
+  - `getOwnPropertyDescriptor`：_(获取某个属性的描述对象)_ _([details](./Object/getOwnPropertyDescriptor.js))_
+  - `defineProperty`：_(通过描述对象，定义某个属性)_ _([details](./Object/defineProperty.md))_
+  - `defineProperties`：_(通过描述对象，定义多个属性)_ _([details](./Object/defineProperties.md))_
+  - `preventExtensions`：_(防止对象扩展，防止对象添加新的属性)_
   - `isExtensible`：_(判断对象是否可扩展)_
-  - `seal`：_(禁止对象配置)_
+  - `seal`：_(禁止对象配置，防止对象添加新属性、删除旧属性)_
   - `isSealed`：_(判断一个对象是否可配置)_
-  - `freeze`：_(冻结一个对象)_
+  - `freeze`：_(冻结一个对象，无法添加新属性、无法删除旧属性、也无法改变属性的值，使得这个对象实际上变成了常量)_
   - `isFrozen`：_(判断一个对象是否被冻结)_
   - `create`：_(该方法可以指定原型对象和属性，返回一个新的对象)_
   - `getPrototypeOf`：_(获取对象的 Prototype 对象)_
@@ -74,14 +78,26 @@
 
 ### Number
 
-- 数值范围 _(`Number.MAX_VALUE Number.MIN_VALUE`)_
-- [NaN](./number/nan.js) _(Not a Number 非数字)_
-- Infinity _(无穷)_
-- parseInt
-- parseFloat
-- isNaN
-- [isFinite](./number/isFinite.js) _(是否为正常的数值)_
-- [Math]()
+- 全局方法 window.fns
+  - `parseInt`
+  - `parseFloat`
+  - `isNaN`
+  - `isFinite`(./number/isFinite.js) _(是否为正常的数值)_
+- Math
+- 静态属性
+  - `POSITIVE_INFINITY`: 正的无限，指向`Infinity`
+  - `NEGATIVE_INFINITY`: 负的无限，指向`-Infinity`
+  - `NaN`: 非数值，指向 `NaN`
+  - `MIN_VALUE`: 最小的正数 `5e-324`
+  - `MAX_VALUE`: 最大的正数 `1.7976931348623157e+308`
+  - `MAX_SAFE_INTEGER`: 能够精确表示的最大整数，即 `9007199254740991`
+  - `MIN_SAFE_INTEGER`: 能够精确表示的最小整数，即`-9007199254740991`
+- 实例方法
+  - `toString`
+  - `toLocaleString`:接受一个地区码作为参数，返回一个字符串，表示当前数字在该地区的当地书写形式 _[d](./Number/toLocaleString.md)_
+  - `toFixed`
+  - `toExponential`
+  - `toPrecision`
 
 ### String 字符串
 
@@ -111,14 +127,36 @@
 
 ### Array 数组
 
-- [数组基础方法](./array/base.md)
-- [length](./array/lenght.md) _(数组长度)_
+- 静态方法 Array.fns
+  - `isArray` (是否为数组)
+- 实例属性
+  - `length` (数组长度) _([detail](./Array/length.md))_
+- 实例方法 Array.prototype.fns
+
+  - `valueOf` (返回数组本身)
+  - `toString` (返回数组转化后的字符串)
+  - `push | pop`(末尾添加一个或多个元素 | 删除最后一个元素)
+  - `unshift | shift`(开头添加一个或多个元素 | 删除第一个元素)
+  - `join`(拼接成字符串)
+  - `concat`(合并)
+  - `reverse`(颠倒)
+  - `slice`(截取)
+  - `splice`(删除一部分成员，并添加部分成员)
+  - `sort`(排序)
+  - `map`(映射)
+  - `forEach`(遍历)
+  - `filter`(过滤)
+  - `some`(一个成员满足条件，则返回 true)
+  - `every`(每个成员满足条件，则返回 true)
+  - `reduce | reduceRight`(归纳)
+  - `indexOf | lastIndexOf`(返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1)
+
 - [数组空位](./array/empty.md)
 - [排序](./array/sort/index.md)
 - [去重](./array/removeDuplicate.md)
 - [遍历](./array/ergodic.md)
-- [关键字搜索](./array/search/index.js)
 - 类数组 _(通过索引属性访问元素并且拥有 length 属性的对象)_
+- 链式调用
 
 ### Date 日期
 
@@ -159,5 +197,7 @@
 - [BOM | DOM](./DOM&BOM/index.md)
 - [虚拟列表]() _(按需渲染，只渲染可视区域的数据)_
 - [服务端渲染]()
-- [大前端]()
-- [加密方式]()
+- 大前端
+- 加密方式
+- [关键字搜索](./array/search/index.js)
+- 报装对象
