@@ -56,10 +56,10 @@
 - Object 静态方法
   - `keys` _(返回对象自身所有非继承属性名)_
   - `values` _(返回对象自身所有非继承属性名对应的值)_
-  - `getOwnPropertyNames` _(返回对象自身所有属性名)_ _([details]())_
-  - `getOwnPropertyDescriptor`：_(获取某个属性的描述对象)_ _([details](./Object/getOwnPropertyDescriptor.js))_
-  - `defineProperty`：_(通过描述对象，定义某个属性)_ _([details](./Object/defineProperty.md))_
-  - `defineProperties`：_(通过描述对象，定义多个属性)_ _([details](./Object/defineProperties.md))_
+  - `getOwnPropertyNames` _(返回对象自身所有属性名)_ _[D]()_
+  - `getOwnPropertyDescriptor`：_(获取某个属性的描述对象)_ _[D](./Object/getOwnPropertyDescriptor.js)_
+  - `defineProperty`：_(通过描述对象，定义某个属性)_ _[D](./Object/defineProperty.md)_
+  - `defineProperties`：_(通过描述对象，定义多个属性)_ _[D](./Object/defineProperties.md)_
   - `preventExtensions`：_(防止对象扩展，防止对象添加新的属性)_
   - `isExtensible`：_(判断对象是否可扩展)_
   - `seal`：_(禁止对象配置，防止对象添加新属性、删除旧属性)_
@@ -70,7 +70,7 @@
   - `getPrototypeOf`：_(获取对象的 Prototype 对象)_
 - Object.prototype 实例方法
   - `valueOf`：_(返回当前对象对应的值)_
-  - `toString`：_(返回当前对象对应的字符串形式)_ _([details](./Object/prototype.toString.js))_
+  - `toString`：_(返回当前对象对应的字符串形式)_ _[D](./Object/prototype.toString.js)_
   - `toLocaleString`：_(返回当前对象对应的字符串形式)_
   - `hasOwnProperty`：_(判断某个属性是否为当前对象自身的属性，还是继承自原型对象的属性)_
   - `isPrototypeOf`：_(判断当前对象是否为另一个对象的原型)_
@@ -83,7 +83,6 @@
   - `parseFloat`
   - `isNaN`
   - `isFinite`(./number/isFinite.js) _(是否为正常的数值)_
-- Math
 - 静态属性
   - `POSITIVE_INFINITY`: 正的无限，指向`Infinity`
   - `NEGATIVE_INFINITY`: 负的无限，指向`-Infinity`
@@ -94,13 +93,31 @@
   - `MIN_SAFE_INTEGER`: 能够精确表示的最小整数，即`-9007199254740991`
 - 实例方法
   - `toString`
-  - `toLocaleString`:接受一个地区码作为参数，返回一个字符串，表示当前数字在该地区的当地书写形式 _[d](./Number/toLocaleString.md)_
+  - `toLocaleString`:接受一个地区码作为参数，返回一个字符串，表示当前数字在该地区的当地书写形式 _[D](./Number/toLocaleString.md)_
   - `toFixed`
   - `toExponential`
   - `toPrecision`
 
 ### String 字符串
 
+- 静态方法
+  - `fromChartCode`: 根据 Unicode 码点返回字符串
+- 实例属性
+  - `length`: 字符串长度
+- 实例方法
+  - `charAt`: 返回指定位置的字符
+  - `charCodeAt`: 字符串指定位置的 Unicode 码点
+  - `concat`: 拼接
+  - `slice | substring | substr`: 截取 [D](./String/slice.md)
+  - `indexOf | lastIndexOf`: 第一次出现索引位置
+  - `trim`: 去除首尾空格、制表符`\t | \v`、换行符`\n`
+  - `toLowerCase | toUpCase`: 转小写 | 转大写
+  - `match`: 匹配子字符串 [D](./String/match.md)
+  - `search`: 查找子字符串 [D](./String/match.md)
+  - `replace`: 匹配替换
+  - `split`: 分割为数组
+  - `localeCompare`: 比较两个字符串
+- 去除字符串首尾空格的方法 [D](./String/trim.md)
 - 模板字符串
 - [回文字符串]()
 - `btoa | atob` _(Base64 转码)_
@@ -177,18 +194,20 @@
 
 ### 元素
 
+- `document`
+  - `open`: 清空页面内容，渲染新页面
 - [事件对象]()
 - [事件委托]()
 - [获取元素]()
 - [元素滚动]()
 - [元素事件绑定]()
 - [拖拽](./event/drag.html)
-- [鼠标跟随效果](./event/mouseFollow.html)
+- 鼠标跟随效果 _[D](./event/mouseFollow.html)_
 
 ### 其它
 
-- [垃圾回收机制](https://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
-- [Event Loop](./eventLoop.md)
+- 垃圾回收机制 _[D](https://www.ruanyifeng.com/blog/2017/04/memory-leak.html)_
+- Event Loop _[D](./eventLoop.md)_
 - [MutationObserver]()
 - [原型链、继承](./JavaScript/protoType.md)
 - [设计模式](./designPatterns/index.md)
@@ -201,3 +220,7 @@
 - 加密方式
 - [关键字搜索](./array/search/index.js)
 - 报装对象
+
+### 面向对象编程
+
+### 浏览器
