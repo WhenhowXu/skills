@@ -10,9 +10,12 @@
   - `rejected`: 异步操作失败
 
 - 静态方法
-  - `all`:
-  - `race`:
+  - `all`: 一次执行多个 promise 实例，都返回成功执行 then 的逻辑，只要一个失败执行，其它的将不再执行 catch [D](./all.js)
+  - `race`: 竞赛，第一执行完的并且是成功则执行 then 逻辑，否则走 catch [D](./race.js)
 - 实例方法
-  - `then`:
+
+  - `then`: 
   - `catch`:
-  - `finally`:
+  - `finally`: 
+
+  - Promise A+ 规范
