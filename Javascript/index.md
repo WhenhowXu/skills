@@ -98,6 +98,23 @@
   - `toExponential`
   - `toPrecision`
 
+### Math
+
+- 静态属性
+  - `E`: 常熟`e`
+- 静态方法
+  - `abs`: 绝对值
+  - `ceil`: 向上取整
+  - `floor`: 向下取整
+  - `max`: 最大值
+  - `min`: 最小值
+  - `pow`: 幂运算
+  - `sqrt`: 平方根
+  - `log`: 自然对数
+  - `exp`: `e`的指数
+  - `round`: 四舍五入
+  - `random`: 随机数
+
 ### String 字符串
 
 - 静态方法
@@ -177,6 +194,35 @@
 
 ### Date 日期
 
+- `Date()`: 当做普通函数返回当前时间
+- 静态方法 `Date[functions]`
+  - `now`:
+  - `parse`:
+  - `UTC`:
+- 实例方法 `Date.prototype[functions]`
+
+  - `valueOf`:
+  - `toString`: 返回一个完整的日期字符串
+  - `toUTCString`: 对应的 UTC 时间，也就是比北京时间晚 8 个小时
+  - `toISOString`: 对应时间的 ISO8601 写法， UTC 时区的时间
+  - `toJSON`: 与`toISOString`返回相同
+  - `toDateString`: 方法返回日期字符串（不含小时、分和秒）
+  - `toTimeString`: 方法返回时间字符串（不含年月日）
+  - `toLocaleString`: '2023/8/15 13:32:52'
+  - `toLocaleDateString`: '2023/8/15'
+  - `toLocaleTimeString`: '13:34:34'
+  - `getTime`: 返回实例距离 1970 年 1 月 1 日 00:00:00 的毫秒数，等同于 valueOf 方法。
+  - `getDate`: 返回实例对象对应每个月的几号（从 1 开始
+  - `getDay`: 返回星期几，星期日为 0
+  - `getFullYear`: 年份
+  - `getMonth`: 月份
+  - `getHours`: 小时
+  - `getMinutes`: 分钟
+  - `getSeconds`: 秒
+  - `getMilliseconds`: 毫秒
+  - `getTimezoneOffset`: 返回当前时间与 UTC 的时区差异，以分钟表示，返回结果考虑到了夏令时因素
+
+- 如何获取一个月有多少天
 - [moment]()
 - [day.js]()
 
@@ -188,9 +234,9 @@
 
 ### 异步编程
 
-- [回调地狱]()
-- [Promise](./Promise/index.md)
-- [async await]()
+- 回调地狱 
+- Promise [D](./Promise/index.md)
+- async await
 
 ### 元素
 
@@ -219,7 +265,6 @@
 - 大前端
 - 加密方式
 - [关键字搜索](./array/search/index.js)
-- 报装对象
 
 ### 面向对象编程
 

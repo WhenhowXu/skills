@@ -31,6 +31,7 @@
   (runoob_title, runoob_author, submission_date,create_time)
   VALUES
   ("学习 JavaScript", "Tom", NOW(), NOW());
+  
   // 插入多条数据
   INSERT INTO `runoob_test`
   (runoob_title, runoob_author, submission_date,create_time)

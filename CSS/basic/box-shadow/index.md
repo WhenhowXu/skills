@@ -1,0 +1,7 @@
+- 语法`box-show: h-shadow v-shadow blur spread color inset`
+  - `h-shadow`: 必需 水平阴影位置 可为负值
+  - `v-shadow`: 必需 垂直阴影位置 可为负值
+  - `blur`: 可选 模糊距离
+  - `spread`: 可选 阴影大小
+  - `color`: 可选 阴影颜色
+  - `inset`: 可选 默认外阴影，inset 则为外阴影

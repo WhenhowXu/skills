@@ -51,6 +51,8 @@ server.listen(port, () => {
 - **events**
 - **`__dirname`**
 
-
 ### 库
+
 - `jsonwebtoken`
+- `Sequelize`
+- `mysql`

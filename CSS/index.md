@@ -9,19 +9,14 @@
 
 ### CSS 基础
 
-- [display](./display/index.md)
-- [visibility]()
-- [position](./postion/index.md)
-  > 定位
-- [animation]()
-  > 帧动画，可定义中间状态
-- [transition]()
-  > 过度动画，可设置开始和结束状态
-- [transform]()
-  > 变形
-- [background]()
-- [box-shadow]()
-  > 阴影
+- display 布局 [D](./display/index.md)
+- visibility 可见性
+- position 定位 [D](./postion/index.md)
+- animation 帧动画
+- transition 过度动画
+- transform 变形
+- background 背景 [D](./basic/background/index.md)
+- box-shadow 阴影 [D](./basic/box-shadow/index.md)
 
 ### 知识点
 

@@ -1,0 +1,9 @@
+- 语法：`background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;`
+  - `background-color`: 背景颜色
+  - `background-position`: 背景图片位置
+  - `background-image`: 背景图片 可指定一个或者多个
+  - `background-size`: 背景图片大小
+  - `background-repeat`: 如何重复背景图像
+  - `background-origin`: 背景图像定位位置
+  - `background-clip`: 背景图像绘画区域
+  - `background-attachment`: 背景图像是否固定或者随着页面的其余部分滚动
