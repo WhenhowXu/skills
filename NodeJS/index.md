@@ -41,8 +41,9 @@
     - `join`: 多个路径拼接为标准路径
     - `extname`: 获取扩展名
   - url
+    - `parse`:
   - http
-  - https 与`http`模块极为类似，区别在于`https`模块需要额外处理SSL证书
+  - https 与`http`模块极为类似，区别在于`https`模块需要额外处理 SSL 证书
 
 ### 数据
 

@@ -5,8 +5,8 @@
 - [directives 指令](./directives/index.md)
 
   - [自定义指令实现元素拖拽]()
-  - 自定义指令实现水印效果
-  - 自定义指令实现节流和防抖
+  - [自定义指令实现水印效果]()
+  - [自定义指令实现节流和防抖]()
   - [如何实现 v-model 双向绑定](./directives/model.html)
 
 - [filter 过滤器](./filter/index.md)
@@ -20,10 +20,11 @@
 
 ### 常用库
 
+- `vue-infinite-scroll`: 虚拟滚动
 - `v-viewer` 图片预览
 - `vue-draggable-resizable` 拖拽
 - 富文本编辑：
 
   - `tinymce`
 
-- [vue 项目性能优化]()
+### vue 项目性能优化

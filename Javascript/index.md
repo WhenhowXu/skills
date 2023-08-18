@@ -135,6 +135,7 @@
   - `split`: 分割为数组
   - `localeCompare`: 比较两个字符串
 - 去除字符串首尾空格的方法 [D](./String/trim.md)
+- 驼峰、下划线、横线写法相互转化 [D](./String/toCamel.js)
 - 模板字符串
 - [回文字符串]()
 - `btoa | atob` _(Base64 转码)_

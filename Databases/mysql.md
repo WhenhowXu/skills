@@ -31,7 +31,7 @@
   (runoob_title, runoob_author, submission_date,create_time)
   VALUES
   ("学习 JavaScript", "Tom", NOW(), NOW());
-  
+
   // 插入多条数据
   INSERT INTO `runoob_test`
   (runoob_title, runoob_author, submission_date,create_time)
@@ -113,3 +113,28 @@
 
 - ALERT
   > 用于修改数据库、表和索引等对象的结构
+
+### 实用技巧
+
+- 创建时间、更新时间设置默认值
+
+```sql
+CREATE TABLE IF NOT EXISTS `menus` (
+  `id` INT UNSIGNED AUTO_INCREMENT,
+  `title` VARCHAR(100) NOT NULL,
+  `icon` VARCHAR(50),
+  `path` VARCHAR(100),
+  `template_path` VARCHAR(100),
+  `status` BOOLEAN DEFAULT true,
+  `deletable` BOOLEAN DEFAULT true,
+  `editable` BOOLEAN DEFAULT true,
+  `parent_id` INT,
+  `creator` VARCHAR(50),
+  `creator_id` VARCHAR(50),
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+- 数据库字段转驼峰
