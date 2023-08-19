@@ -1,9 +1,9 @@
 ### 主要知识点
 
-- [JavaScript](./JavaScript/index.md)
+- ⭐️ [JavaScript](./JavaScript/index.md)
 - [Vue2](./Vue2/index.md)
-- [Vue3](./Vue3/index.md)
-- [React](./React/index.md)
+- ⭐️ [Vue3](./Vue3/index.md)
+- ⭐️ [React](./React/index.md)
 - [Jquery]()
 - [React Native]()
 - [TypeScript](./TypeScript/index.md)
@@ -16,6 +16,7 @@
   - [Express](./NodeJS/express/index.md)
   - [deno]()
 - [micro frontend 微前端](./MicroFrontend/index.md)
+- ⭐️ Java 
 
 ### Common Libraries
 
@@ -34,7 +35,7 @@
 
 ### 数据库知识
 
-- [Mysql](./Databases/mysql.md)
+- ⭐️ [Mysql](./Databases/mysql.md)
 - [MongoDB]()
 
 ### Common Tools
