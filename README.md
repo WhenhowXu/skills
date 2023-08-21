@@ -16,7 +16,7 @@
   - [Express](./NodeJS/express/index.md)
   - [deno]()
 - [micro frontend 微前端](./MicroFrontend/index.md)
-- ⭐️ Java 
+- ⭐️ [Java](./Java/index.md)
 
 ### Common Libraries
 
