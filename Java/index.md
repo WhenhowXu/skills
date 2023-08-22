@@ -109,7 +109,7 @@ class Outer {
   - 包装类: 例如`int` 对应的报装类为`java.lang.Integer`
   - 注意：
     - 引用类型可以赋值为 null，表示空，但基本类型不能赋值为 null
-    - 引用类型比较，要使用equals()方法，如果使用==比较，它比较的是两个引用类型的变量是否是同一个对象
+    - 引用类型比较，要使用 equals()方法，如果使用==比较，它比较的是两个引用类型的变量是否是同一个对象
 
 ### 运算
 
@@ -187,13 +187,166 @@ public void setXyz(Type value)
 // boolean字段比较特殊，它的读方法一般命名为isXyz()：
 ```
 
+### 核心类
+
 - `enmu`: 枚举类
-    - 定义的enum类型总是继承自java.lang.Enum，且无法被继承；
-    - 只能定义出enum的实例，而无法通过new操作符创建enum的实例
-    - 定义的每个实例都是引用类型的唯一实例
+  - 定义的 enum 类型总是继承自 java.lang.Enum，且无法被继承；
+  - 只能定义出 enum 的实例，而无法通过 new 操作符创建 enum 的实例
+  - 定义的每个实例都是引用类型的唯一实例
 
 ```java
 enum Weekday {
     SUN, MON, TUE, WED, THU, FRI, SAT;
 }
 ```
+
+- `record`: 记录类 ,使用 record 关键字，可以一行写出一个不变类
+
+```java
+// 定义class时使用final，无法派生子类
+// 每个字段使用final，保证创建实例后无法修改任何字段
+```
+
+- `BigInteger`: 用来表示任意大小的整数
+- `BigDecimal`: 表示一个任意大小且精度完全准确的浮点数
+
+### 异常处理
+
+- 异常
+  - `Throwable`是异常体系的根，它继承自 Object。`Throwable`有两个体系：`Error`和`Exception`
+  - `Error`表示严重的错误，程序对此一般无能为力
+  - `Exception`则是运行时的错误，它可以被捕获并处理
+- 捕获异常
+  - 凡是可能抛出异常的语句，都可以用`try ... catch`捕获
+  - 多个 catch 语句只有一个能被执行
+  - 存在多个 catch 的时候，catch 的顺序非常重要：子类必须写在前面
+  - `finally`语句块保证有无错误都会执行
+- 断言`assert`: 调试程序的方式
+- 日志 日志包`java.util.logging`
+  - 使用日志最大的好处是，它自动打印了时间、调用类、调用方法等很多有用的信息
+  - 日志的输出可以设定级别
+
+### 泛型
+
+- 泛型就是定义一种模板
+
+### 集合 `Collection`
+
+- 定义：由若干个确定的元素所构成的整体
+- java.util 包主要提供了以下三种类型的集合
+  - `List`: 一种有序列表的集合
+  - `Set`: 一种保证没有重复元素的集合
+  - `Map`: 一种通过键值（key-value）查找的映射表集合
+- `List`使用：
+
+  - 创建
+
+  ```java
+    List<Integer> list = List.of(1,2,5);
+  ```
+
+  - 遍历
+
+  ```java
+  List<Integer> list = List.of(1, 2, 5);
+  for (int i = 0; i < list.size(); i++) {
+    int s = list.get(i);
+    System.out.println(s);
+  }
+  ```
+
+  - `boolean contains(Object o)`方法来判断 List 是否包含某个指定元素
+  - `int indexOf(Object o)`: 返回某个元素的索引，不存在返回-1
+
+- `Map`使用
+
+  - 遍历
+    - Map 存储的是 key-value 的映射关系，并且，它不保证顺序。在遍历的时候，遍历的顺序既不一定是 put()时放入的 key 的顺序，也不一定是 key 的排序顺序
+    - 甚至对于不同的 JDK 版本，相同的代码遍历的输出顺序都是不同的
+
+  ```java
+    Map<String, Integer> map = new HashMap<>();
+    map.put("apple", 10);
+    map.put("watermalon", 100);
+    map.put("pear", 92);
+    for(String key: map.keySet()){
+        Integer value = map.get(key);
+        System.out.println(key+" = "+value);
+    }
+
+    // 同时遍历key和value可以使用for each循环遍历Map对象的entrySet()集合
+    Map<String, Integer> map = new HashMap<>();
+    map.put("apple", 10);
+    map.put("watermalon", 100);
+    map.put("pear", 92);
+    for(Map.Entry<String, Integer> entry: map.entrySet()){
+        String key = entry.getKey();
+        Integer value = entry.getValue();
+        System.out.println(key+" = "+value);
+    }
+  ```
+
+- `HashMap`: 是一种通过对 key 计算 hashCode()，通过空间换时间的方式，直接定位到 value 所在的内部数组的索引，因此，查找效率非常高
+- `EnumMap`: 作为 key 的对象是 enum 类型, 内部以一个非常紧凑的数组存储 value，并且根据 enum 类型的 key 直接定位到内部数组的索引
+- `SortedMap`: 保证遍历时以 Key 的顺序来进行排序, 它的实现类是`TreeMap`
+
+```java
+// 作为SortedMap的Key必须实现Comparable接口，或者传入Comparator
+import java.util.*;
+
+public class Hello {
+    public static void main(String[] args) {
+        Map<Student, Integer> map = new TreeMap<>(new Comparator<Student>() {
+            public int compare(Student p1, Student p2) {
+                if (p1.score == p2.score) {
+                    return 0;
+                }
+                return p1.score > p2.score ? -1 : 1;
+            }
+        });
+        map.put(new Student("Lily", 86), 1);
+        map.put(new Student("Tom", 10), 2);
+        map.put(new Student("Test", 67), 3);
+        for (Student key : map.keySet()) {
+            System.out.println(key);
+        }
+        System.out.println(map.get(new Student("Tom", 10))); // 2
+    }
+
+}
+
+class Student {
+    public String name;
+    public int score;
+
+    Student(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+
+    public String toString() {
+        return String.format("{%s: score=%d}", name, score);
+    }
+}
+```
+
+- `Set`
+  - 实际上相当于只存储 key、不存储 value 的 Map。我们经常用 Set 用于去除重复元素
+- `Queue`: 实现了一个先进先出（FIFO：First In First Out）的有序表
+  - `Queue`只有两个操作：把元素添加到队列末尾, 从队列头部取出元素
+  - 通过`add()/offer()`方法将元素添加到队尾
+  - 通过`remove()/poll()`从队首获取元素并删除
+  - 通过`element()/peek()`从队首获取元素但不删除
+- `PriorityQueue`: 和`Queue`的区别在于，它的出队顺序与元素的优先级有关
+  - 放入 PriorityQueue 的元素，必须实现 Comparable 接口，PriorityQueue 会根据元素的排序顺序决定出队的优先级
+- `Deque`: 双端队列， 它的实现类有`ArrayDeque`和`LinkedList`
+- `Stack`: 是一种后进先出（LIFO：Last In First Out）的数据结构
+- `Properties`: Properties 内部本质上是一个 Hashtable，但我们只需要用到 Properties 自身关于读写配置的接口
+
+### IO
+
+- File 对象
+- InputStream
+- OutputStream
+
+### 日期与时间
