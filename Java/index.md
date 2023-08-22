@@ -40,6 +40,16 @@ javac Hello.java // 编译成.class 文件
 java Hello.class  // .class可省略
 ```
 
+- 内部类
+
+```java
+// Inner 即为内部类
+class Outer {
+    class Inner{
+    }
+}
+```
+
 ### 变量
 
 - 基本类型变量
@@ -75,11 +85,31 @@ java Hello.class  // .class可省略
 - 引用类型
   - String 字符串
     - 字符串可以用`"""..."""`表示多行字符串
+    - `StringBuilder`: 能高效拼接字符串
+    ```java
+    // 在循环中，每次循环都会创建新的字符串对象，然后扔掉旧的字符串。这样，绝大部分字符串都是临时对象，不但浪费内存，还会影响GC效率
+    StringBuilder sb = new StringBuilder(1024);
+        for (int i = 0; i < 1000; i++) {
+            sb.append(',');
+            sb.append(i);
+        }
+    String s = sb.toString();
+    ```
+    - `StringJoiner`: 带分隔符高效拼接字符串
+    - `String.join`
+    ```java
+    String[] names = {"Lily", "Lucy", "Tom"};
+    String s = String.join(",", names); // Lily,Lucy,Tom
+    ```
   - `[]` 数组
     - 数组是引用类型，在使用索引访问数组元素时，如果索引超出范围，运行时将报错
     - 数组遍历
     - 数组排序
     - 多维数组
+  - 包装类: 例如`int` 对应的报装类为`java.lang.Integer`
+  - 注意：
+    - 引用类型可以赋值为 null，表示空，但基本类型不能赋值为 null
+    - 引用类型比较，要使用equals()方法，如果使用==比较，它比较的是两个引用类型的变量是否是同一个对象
 
 ### 运算
 
@@ -131,3 +161,39 @@ public class Hello {
 - `do while`
 - `for`
 - `break continue`
+
+### 未分类
+
+- 包 `package`
+  - 没有定义包名的 class，它使用的是默认包，非常容易引起名字冲突，因此，不推荐不写包名的做法
+- 作用域
+  - protected 作用于继承关系。定义为 protected 的字段和方法可以被子类访问，以及子类的子类
+  - 定义为 private 的 field、method 无法被其他类访问：
+- `classpath`: JVM 用到的一个环境变量，它用来指示 JVM 如何搜索 class
+
+```
+java -cp .;C:\work\project1\bin;C:\shared abc.xyz.Hello
+```
+
+- `JavaBean`
+
+```java
+// 读写方法符合以下这种命名规范的class被称为JavaBean
+// 读方法:
+public Type getXyz()
+// 写方法:
+public void setXyz(Type value)
+
+// boolean字段比较特殊，它的读方法一般命名为isXyz()：
+```
+
+- `enmu`: 枚举类
+    - 定义的enum类型总是继承自java.lang.Enum，且无法被继承；
+    - 只能定义出enum的实例，而无法通过new操作符创建enum的实例
+    - 定义的每个实例都是引用类型的唯一实例
+
+```java
+enum Weekday {
+    SUN, MON, TUE, WED, THU, FRI, SAT;
+}
+```
