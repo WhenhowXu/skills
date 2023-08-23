@@ -363,6 +363,7 @@ System.out.println(System.currentTimeMillis()); // 1692758260803
 ```
 
 - 标准库
+
   - java.util
     - `Date`: 用于表示一个日期和时间的对象
     ```java
@@ -388,7 +389,9 @@ System.out.println(System.currentTimeMillis()); // 1692758260803
     System.out.println(tzNY.getID());
     ```
   - java.time
+
     - `LocalDateTime | LocalDate | LocalTime`: 本地日期和时间
+
     ```java
     LocalDate d = LocalDate.now();
     LocalTime t = LocalTime.now();
@@ -397,7 +400,9 @@ System.out.println(System.currentTimeMillis()); // 1692758260803
     System.out.println(t); // 11:03:09.043023200
     System.out.println(dt); // 2023-08-23T11:03:09.043023200
     ```
+
     - `ZonedDateTime`：带时区的日期和时间
+
     ```java
     ZonedDateTime z0 = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
     ZonedDateTime z1 = z0.withZoneSameInstant(ZoneId.of("America/New_York"));
@@ -406,13 +411,15 @@ System.out.println(System.currentTimeMillis()); // 1692758260803
 
     // 时区转换的时候，由于夏令时的存在，不同的日期转换的结果很可能是不同的
     ```
+
     - `ZoneId | ZoneOffset`：时区
     - `Duration`：时间间隔
     - `Instant`：时刻
 
 ### 测试
+
 - 单元测试： 单个方法按照正确预期运行，如果修改了某个方法的代码，只需确保其对应的单元测试通过，即可认为改动正确
-    - `JUnit`: Java 单元测试框架
+  - `JUnit`: Java 单元测试框架
 
 ### 加密与安全
 
@@ -436,3 +443,53 @@ System.out.println(System.currentTimeMillis()); // 1692758260803
 ### JDBC (Java DataBase Connectivity)
 
 - Java 程序要通过`JDBC`接口来查询数据库, Java 程序访问数据库的标准接口
+- 查询
+- 更新
+- 事务
+
+```java
+Connection conn = openConnection();
+try {
+    conn.setAutoCommit(false);
+    // 执行多条SQL语句
+    inset(); update(); delete();
+    // 事务提交
+    conn.commit();
+} catch(SQLException e){
+    // 事务回滚
+    conn.rollback();
+} finally {
+    conn.setAutoCommit(true);
+    conn.close();
+}
+```
+
+- Batch: SQL 数据库对 SQL 语句相同，但只有参数不同的若干语句可以作为 batch 执行，即批量执行，这种操作有特别优化，速度远远快于循环执行每个 SQL
+
+```java
+try (PreparedStatement ps = conn.prepareStatement("INSERT INTO students (name, gender, grade, score) VALUES (?, ?, ?, ?)")) {
+    for (Student s: students){
+        ps.setString(1, s.name);
+        ps.setBoolean(2, s.gender);
+        ps.setString(3, s.grade);
+        ps.setString(4, s.score);
+        ps.addBatch();
+    }
+    int[] ns = ps.executeBatch();
+    for(int n: ns){
+        System.out.println(n + "inserted.");
+    }
+}
+```
+
+- `链接池 Connection Pool`: 创建线程是一个昂贵的操作，如果有大量的小任务需要执行，并且频繁地创建和销毁线程，实际上会消耗大量的系统资源，往往创建和消耗线程所耗费的时间比执行任务的时间还长，所以，为了提高效率，可以用线程池
+```java
+HikariConfig config = new HikariConfig();
+config.setJdbcUrl("jdbc:mysql://localhost:3306/test");
+config.setUsername("root");
+config.setPassword("password");
+config.addDataSourceProperty("connectionTimeout", "1000"); // 连接超时：1秒
+config.addDataSourceProperty("idleTimeout", "60000"); // 空闲超时：60秒
+config.addDataSourceProperty("maximumPoolSize", "10"); // 最大连接数：10
+DataSource ds = new HikariDataSource(config);
+```
