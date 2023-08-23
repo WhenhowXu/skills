@@ -483,6 +483,7 @@ try (PreparedStatement ps = conn.prepareStatement("INSERT INTO students (name, g
 ```
 
 - `链接池 Connection Pool`: 创建线程是一个昂贵的操作，如果有大量的小任务需要执行，并且频繁地创建和销毁线程，实际上会消耗大量的系统资源，往往创建和消耗线程所耗费的时间比执行任务的时间还长，所以，为了提高效率，可以用线程池
+
 ```java
 HikariConfig config = new HikariConfig();
 config.setJdbcUrl("jdbc:mysql://localhost:3306/test");
@@ -493,3 +494,18 @@ config.addDataSourceProperty("idleTimeout", "60000"); // 空闲超时：60秒
 config.addDataSourceProperty("maximumPoolSize", "10"); // 最大连接数：10
 DataSource ds = new HikariDataSource(config);
 ```
+
+### Maven
+
+- `Maven`: Java 项目的管理和构建工具
+- `Maven`使用`pom.xml`定义项目内容，并使用预设的目录结构
+- Maven 使用 groupId，artifactId 和 version 唯一定位一个依赖。
+- 构建
+  - `clean`：清理
+  - `compile`：编译
+  - `test`：运行测试
+  - `package`：打包
+
+### 网络编程
+
+- Websocket 长连接
