@@ -26,6 +26,7 @@
 - `vue-easy-print`:_打印_
 - `qrcode`: _二维码_
 - `draggable`: _拖拽库_
+- `Electron`: 
 
 ### 前端常用 UI 库
 
@@ -73,3 +74,5 @@
 
 - [DPR 设备像素比]()
 - [移动端 1px 问题]()
+
+
