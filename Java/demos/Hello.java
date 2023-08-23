@@ -1,11 +1,10 @@
-import java.io.*;
-import java.util.Properties;
+import java.time.*;
+
 public class Hello {
-    public static void main(String[] args) throws FileNotFoundException, IOException {
-        String f = "setting.properties";
-        Properties props = new Properties();
-        props.load(new java.io.FileInputStream(f));
-        System.out.println(props.getProperty("last_open_file"));
+    public static void main(String[] args) {
+        ZonedDateTime z0 = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
+        ZonedDateTime z1 = z0.withZoneSameInstant(ZoneId.of("America/New_York"));
+        System.out.println(z0);
+        System.out.println(z1);
     }
 }
-

@@ -350,3 +350,89 @@ class Student {
 - OutputStream
 
 ### 日期与时间
+
+- 在计算机中，只需要存储一个整数表示某一时刻。当需要显示为某一地区的当地时间时，我们就把它格式化为一个字符串
+- `Epoch Time`: 时间戳，时间戳的几种存储方式
+  - 以秒为单位的整数
+  - 以毫秒为单位的整数
+  - 以秒为单位的浮点数
+- `System.currentTimeMillis()`: Java 获取当前时间戳
+
+```java
+System.out.println(System.currentTimeMillis()); // 1692758260803
+```
+
+- 标准库
+  - java.util
+    - `Date`: 用于表示一个日期和时间的对象
+    ```java
+    // 它不能转换时区，除了toGMTString()可以按GMT+0:00输出外，Date总是以当前计算机系统的默认时区为基础进行输出
+    Date d = new Date();
+    System.out.println(d.toString()); // Wed Aug 23 10:43:35 CST 2023
+    // toGMTString等方法已弃用
+    ```
+    - `Calendar`： 可以用于获取并设置年、月、日、时、分、秒，它和 Date 比，主要多了一个可以做简单的日期和时间运算的功能
+    ```java
+    Calendar c = Calendar.getInstance();
+    c.clear();
+    c.set(2012, 8, 2, 21, 22, 23);
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(c.getTime())); // 2012-09-02 21:22:23
+    ```
+    - `TimeZone`：提供了时区转的功能
+    ```java
+    TimeZone tzDefault = TimeZone.getDefault();
+    TimeZone tzGMT9 = TimeZone.getTimeZone("GMT+09:00");
+    TimeZone tzNY = TimeZone.getTimeZone("America/New_York");
+    System.out.println(tzDefault.getID()); // Asia/Shanghai
+    System.out.println(tzGMT9.getID());
+    System.out.println(tzNY.getID());
+    ```
+  - java.time
+    - `LocalDateTime | LocalDate | LocalTime`: 本地日期和时间
+    ```java
+    LocalDate d = LocalDate.now();
+    LocalTime t = LocalTime.now();
+    LocalDateTime dt = LocalDateTime.now();
+    System.out.println(d); // 2023-08-23
+    System.out.println(t); // 11:03:09.043023200
+    System.out.println(dt); // 2023-08-23T11:03:09.043023200
+    ```
+    - `ZonedDateTime`：带时区的日期和时间
+    ```java
+    ZonedDateTime z0 = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
+    ZonedDateTime z1 = z0.withZoneSameInstant(ZoneId.of("America/New_York"));
+    System.out.println(z0); // 2023-08-23T11:08:26.078708100+08:00[Asia/Shanghai]
+    System.out.println(z1); // 2023-08-22T23:08:26.078708100-04:00[America/New_York]
+
+    // 时区转换的时候，由于夏令时的存在，不同的日期转换的结果很可能是不同的
+    ```
+    - `ZoneId | ZoneOffset`：时区
+    - `Duration`：时间间隔
+    - `Instant`：时刻
+
+### 测试
+- 单元测试： 单个方法按照正确预期运行，如果修改了某个方法的代码，只需确保其对应的单元测试通过，即可认为改动正确
+    - `JUnit`: Java 单元测试框架
+
+### 加密与安全
+
+- 编码算法
+- 哈希算法
+  - 哈希碰撞是指，两个不同的输入得到了相同的输出，碰撞是一定会出现的，因为输出的字节长度是固定的
+  - 一个安全的哈希算法必须满足， 碰撞概率低， 不能猜测输出
+  - 哈希算法的输出长度越长，就越难产生碰撞，也就越安全
+  - 常用哈希算法：
+    |算法|输出长度（位）|输出长度（字节）|
+    |----|-------------|--------------|
+    |MD5|128bits|16bytes|
+    |SHA-1|160bits|20bytes|
+    |RipeMD-160|160bits|20bytes|
+    |SHA-256|256bits|32bytes|
+    |SHA-512|512bits|64bytes|
+- `Hmac`算法就是一种基于密钥的消息认证码算法，它的全称是 Hash-based Message Authentication Code，是一种更安全的消息摘要算法
+  - Hmac 算法总是和某种哈希算法配合起来用的
+- 对称加密算法: 传统的用一个密码进行加密和解密
+
+### JDBC (Java DataBase Connectivity)
+
+- Java 程序要通过`JDBC`接口来查询数据库, Java 程序访问数据库的标准接口
