@@ -170,12 +170,14 @@
   - 网址
 
 ### Function 函数
-- Generator Function 生成器函数 [D](./Function/generator.md)
+
+- Generator Function 生成器函数 [D](./Function/1-generator.md)
+- Arrow Function 箭头函数 [D](./Function/2-arrow.md)
+
 - [声明](./function/declare.md)
 - arguments
 - [作用域](./function/scope.md)
 - [this]()
-- [箭头函数]()
 - [自执行函数]()
 - [标签函数](./function/tagFunction.md)
 - [闭包](./function/clusure.md)
