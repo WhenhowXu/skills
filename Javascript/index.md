@@ -2,7 +2,7 @@
 
 - 类型种类 [D](./dataType/type.md)
 - 类型判断
-  - `Object.prototype.toString` _[D](./Object/prototype.toString.js)_
+  - `Object.prototype.toString` [D](./Object/prototype.toString.js)
   - `instance of`
   - `typeof`
   - `constructor`
@@ -18,7 +18,8 @@
 - 条件语句 _(`if | if else if else | switch | a ? b : c`)_
 - 循环语句 _(`while | for | do while`)_
 - 标签 _(语句前面有标签，相当于定位符，用于跳转到程序的任意位置)_
-- `break | continue` _（[break 单独使用只能跳出内层循环，配合标签可以跳出特定的外层循环](./statements/break.js)）_
+- `break | continue`
+  - `break` 单独使用只能跳出内层循环，配合标签可以跳出特定的外层循环 [D](./statements/break.js)
 
 ### 运算符、操作符
 
@@ -131,7 +132,7 @@
   - `toLowerCase | toUpCase`: 转小写 | 转大写
   - `match`: 匹配子字符串 [D](./String/match.md)
   - `search`: 查找子字符串 [D](./String/match.md)
-  - `replace`: 匹配替换
+  - `replace`: 匹配替换 [D](./String/replace.md)
   - `split`: 分割为数组
   - `localeCompare`: 比较两个字符串
 - 去除字符串首尾空格的方法 [D](./String/trim.md)
@@ -144,8 +145,29 @@
 
 ### RegExp 正则表达式
 
-- [修饰符]()
-- [正则捕获]()
+- 创建正则表达式 [D](./RegExp/create.md)
+- 实例方法
+  - `exec`:
+  - `test`:
+- 特殊字符
+  - `\`: 转义字符
+  - `^`: 匹配开始
+  - `$`: 匹配结束
+  - `*`: 出现 0 到多次，相当于`{0,}`
+  - `+`: 出现 1 到多次，相当于`{1,}`
+  - `?`: 出现 0 到 1 次，相当于`{0,1}`
+  - `.`: 匹配除换行符之外的任何单个字符
+  - `(x)`：匹配'x'，并捕获匹配项 [D](./RegExp/1.md)
+  - `(?:x)`：匹配'x'，不捕获匹配项 [D](./RegExp/1.md)
+  - `x(?=y)`：匹配'x'仅当后面跟着'y'，又叫先行断言 [D](./RegExp/1.md)
+  - `(?<=y)x`：匹配'x'仅当前面是'y'，又叫后行断言 [D](./RegExp/1.md)
+  - `x|y|z`: 标识 x 或 y 或 z
+- 常用正则表达式
+  - 邮箱
+  - 手机号
+  - 电话
+  - 地址
+  - 网址
 
 ### Function 函数
 
@@ -235,7 +257,7 @@
 
 ### 异步编程
 
-- 回调地狱 
+- 回调地狱
 - Promise [D](./Promise/index.md)
 - async await
 
