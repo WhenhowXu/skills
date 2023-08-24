@@ -173,15 +173,20 @@
 
 - Generator Function 生成器函数 [D](./Function/1-generator.md)
 - Arrow Function 箭头函数 [D](./Function/2-arrow.md)
+- Tag Function 标签函数 [D](./function/3-tag-function.md)
+- `IIFE` 自执行函数
 
-- [声明](./function/declare.md)
+  > 定义函数后立马执行。其中定义变量和函数，而不会污染全局作用域
+
+- 实例方法
+  - `call`:
+  - `apply`:
+  - `bind`:
+  - `toString`:
 - arguments
 - [作用域](./function/scope.md)
 - [this]()
-- [自执行函数]()
-- [标签函数](./function/tagFunction.md)
 - [闭包](./function/clusure.md)
-- [call\bind\apply](./callBindApply.md)
 - [防抖 | 节流]()
 
 ### Array 数组
@@ -294,3 +299,11 @@
 ### 面向对象编程
 
 ### 浏览器
+
+### ES6
+
+- `let | const`
+- 解构赋值
+- Symbol
+- Map Set
+- Reflect Proxy
