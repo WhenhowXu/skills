@@ -1,17 +1,16 @@
 ### 主要知识点
 
-- ⭐️ [JavaScript](./JavaScript/index.md)
+- ⭐️[JavaScript](./JavaScript/index.md)
+- ⭐️[Vue3](./Vue3/index.md)
+- ⭐️[React](./React/index.md)
+- ⭐️[NodeJS](./NodeJS/index.md)
 - [Vue2](./Vue2/index.md)
-- ⭐️ [Vue3](./Vue3/index.md)
-- ⭐️ [React](./React/index.md)
 - [Jquery]()
 - [React Native]()
 - [TypeScript](./TypeScript/index.md)
 - [HTML](./HTML/index.md)
 - [CSS](./CSS/index.md)
 - [Tools](./Tools/index.md)
-- ⭐️[NodeJS](./NodeJS/index.md)
-- [micro frontend 微前端](./MicroFrontend/index.md)
 - [Java](./Java/index.md)
 
 ### Common Libraries
