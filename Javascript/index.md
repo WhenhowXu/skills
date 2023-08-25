@@ -191,20 +191,22 @@
 
 ### Array 数组
 
-- 静态方法 Array.fns
-  - `isArray` (是否为数组)
-- 实例属性
-  - `length` (数组长度) _([detail](./Array/length.md))_
-- 实例方法 Array.prototype.fns
+- 静态方法:
+  - `isArray`: 判断是否为数组
+- 实例属性:
+  - `length` 数组长度 [D](./Array/length.md)
+- 实例方法:
 
-  - `valueOf` (返回数组本身)
-  - `toString` (返回数组转化后的字符串)
-  - `push | pop`(末尾添加一个或多个元素 | 删除最后一个元素)
-  - `unshift | shift`(开头添加一个或多个元素 | 删除第一个元素)
-  - `join`(拼接成字符串)
-  - `concat`(合并)
-  - `reverse`(颠倒)
-  - `slice`(截取)
+  - `valueOf`：返回数组本身
+  - `toString`：返回数组转化后的字符串
+  - `push`：末尾添加一到多项 [D](./Array/1-push.md)
+  - `pop`：删除最后一项 [D](./Array/2-pop.md)
+  - `unshift`：开头添加一到多项 [D](./Array/3-unshift.md)
+  - `shift`：删除第一个元素 [D](./Array/4-shift.md)
+  - `join`: 拼接成字符串 [D](./Array/5-join.md)
+  - `concat`: 合并 [D](./Array/6-concat.md)
+  - `reverse`：颠倒 [D](./Array/7-reverse.md)
+  - `slice`: 截取 [D](./Array/8-slice.md)
   - `splice`(删除一部分成员，并添加部分成员)
   - `sort`(排序)
   - `map`(映射)
