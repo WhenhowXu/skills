@@ -1,17 +1,20 @@
-### 主要知识点
+### front-end
 
-- ⭐️[JavaScript](./JavaScript/index.md)
+- ⭐️JavaScript [D](./FRONT_END/Javascript/index.md)
 - ⭐️[Vue3](./Vue3/index.md)
 - ⭐️[React](./React/index.md)
-- ⭐️[NodeJS](./NodeJS/index.md)
+- ⭐️ 性能优化 [D](./FRONT_END/optimize/index.md)
+- ⭐️[TypeScript](./TypeScript/index.md)
 - [Vue2](./Vue2/index.md)
-- [Jquery]()
-- [React Native]()
-- [TypeScript](./TypeScript/index.md)
 - [HTML](./HTML/index.md)
 - [CSS](./CSS/index.md)
 - [Tools](./Tools/index.md)
 - [Java](./Java/index.md)
+- [Jquery]()
+- [React Native]()
+- 数据可视化
+- [常用插件库](.)
+- 浏览器
 
 ### Common Libraries
 
@@ -23,43 +26,20 @@
 - `draggable`: _拖拽库_
 - `Electron`:
 
-### 前端常用 UI 库
+### back-end
 
-- `ant-design-vue`
-- `element-ui`
-- `vant`
+- ⭐️[NodeJS](./NodeJS/index.md)
+- ⭐️[Mysql](./Databases/mysql.md)
+- MongoDB
+- HTTP
 
-### 数据库知识
-
-- ⭐️ [Mysql](./Databases/mysql.md)
-- [MongoDB]()
-
-### Common Tools
+### Tools
 
 - [Git](./Commands/Git.md)
 - [Nginx](./Commands/Nginx/index.md)
 - [Markdown](./Tools/markdown/index.md)
 - [Docker]
 - [NodeJS]
-
-### 数据可视化
-
-- [Three.js]()
-- [eCharts]()
-
-### 浏览器
-
-- [缓存机制]()
-- [同源策略 | 跨域](./Browsers/cors/index.md)
-- [浏览器兼容问题]()
-
-### HTTP
-
-- [http 和 https 区别]()
-- [状态码]()
-- [简单请求 | 非简单请求]()
-- [三次握手 | 四次挥手]()
-- [Websocket 断线重连]()
 
 ### 未归类
 

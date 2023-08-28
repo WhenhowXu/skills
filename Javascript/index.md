@@ -207,7 +207,7 @@
   - `concat`: 合并 [D](./Array/6-concat.md)
   - `reverse`：颠倒 [D](./Array/7-reverse.md)
   - `slice`: 截取 [D](./Array/8-slice.md)
-  - `splice`(删除一部分成员，并添加部分成员)
+  - `splice`: 删除一部分成员，并添加部分成员 [D](./Array/9-splice.md)
   - `sort`(排序)
   - `map`(映射)
   - `forEach`(遍历)
@@ -221,8 +221,7 @@
 - [排序](./array/sort/index.md)
 - [去重](./array/removeDuplicate.md)
 - [遍历](./array/ergodic.md)
-- 类数组 _(通过索引属性访问元素并且拥有 length 属性的对象)_
-- 链式调用
+- **类数组**: 通过索引属性访问元素并且拥有 length 属性的对象
 
 ### Date 日期
 

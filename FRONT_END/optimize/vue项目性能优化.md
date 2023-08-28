@@ -1,0 +1,30 @@
+- 代码优化
+  - 区分 `v-show` 和 `v-if` 使用
+  - 区分 `computed` 和 `watch`使用
+  - 大数组只做展示时使用`Object.freeze()`冻结，不让其具有响应式
+  - 虚拟列表或者分页加载
+  - 使用`addEventListener`绑定的事件，在实例销毁前溢出监听器，避免内存泄漏
+  - 路由懒加载
+- 构建配置优化
+
+  - 图片压缩`image-webpack-loader`
+  - 按组件分割代码减少请求次数
+  - `babel-plugin-transform-runtime`插件就是实现这个作用的，将相关辅助函数替换成导入语句，解决 Babel 编译装换后的冗余
+  - 提取公共代码， `optimization.splitChunks`
+  - 提取单文件组件的 css
+  - 生产打包关闭生成 sourceMap 文件
+  - `webpack-bundle-analyzer`打包产物分析
+  - 优化 Babel 转换
+  - 优化 resolve.alias 配置
+  - 开启多进程
+  - 开启 Gzip
+  - 静态资源 CDN
+
+- 其它优化
+  - iconfont 代替图片
+  - 浏览缓存
+  - 开启 Http2
+  - 服务端渲染
+  - 资源预加载 rel="prefetch"
+  - 避免重绘、重排
+  - 使用 GPU
