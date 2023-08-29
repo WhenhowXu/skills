@@ -5,6 +5,8 @@
   - 隐式转化和强制转化
 - **数组**
 - **函数**
+  - 闭包
+  - 柯里化
 - **对象**
 - **字符串**
 - **日期**
@@ -17,6 +19,6 @@
   - 继承
 - **JS 沙箱**
 - **异步编程**
-  - Promise [D](./async-programming/promise.md)
-  - async await [D](./async-programming/async-await.md)
+  - [Promise](./async-programming/promise.md)
+  - [async await](./async-programming/async-await.md)
 - **回流和重绘**
