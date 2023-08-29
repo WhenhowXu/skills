@@ -1,9 +1,9 @@
 ### front-end
 
-- ⭐️JavaScript [D](./FRONT_END/Javascript/index.md)
+- ⭐️JavaScript [D](./front-end//Javascript/index.md)
 - ⭐️[Vue3](./Vue3/index.md)
 - ⭐️[React](./React/index.md)
-- ⭐️ 性能优化 [D](./FRONT_END/optimize/index.md)
+- ⭐️ 性能优化 [D](./front-end/optimize/index.md)
 - ⭐️[TypeScript](./TypeScript/index.md)
 - [Vue2](./Vue2/index.md)
 - [HTML](./HTML/index.md)
@@ -17,10 +17,11 @@
 - 浏览器
 
 ### Common Libraries
-
-- `vue-ueditor-wrap`：_富文本编辑_
-- `viewerjs`:_图片预览_
-- `v-viewer`: _vue2 图片预览插件_
+- 富文本编辑插件
+    - `vue-ueditor-wrap`
+- 图片预览
+    - `viewerjs`:_图片预览_
+    - `v-viewer`: _vue2 图片预览插件_
 - `vue-easy-print`:_打印_
 - `qrcode`: _二维码_
 - `draggable`: _拖拽库_
