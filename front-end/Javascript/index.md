@@ -1,8 +1,7 @@
 - **数据类型**
-  - 基本数据类型
-  - 引用数据类型
-  - 数据类型检测方法
-  - 隐式转化和强制转化
+  - [数据类型分类](./data-type/classification.md)
+  - [数据类型检测方法](./data-type/judge-type.md)
+  - [隐式转化和强制转化](./data-type/type-turn.md)
 - **数组**
 - **函数**
   - 闭包
@@ -22,3 +21,4 @@
   - [Promise](./async-programming/promise.md)
   - [async await](./async-programming/async-await.md)
 - **回流和重绘**
+- **设计模式**

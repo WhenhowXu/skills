@@ -1,18 +1,10 @@
-function mockApi(data, isSuccess = true, delay = 1000) {
-  return () =>
-    new Promise((resolve, reject) => {
-      let timer = setTimeout(() => {
-        isSuccess ? resolve(data) : reject(data);
-        clearTimeout(timer);
-      }, delay);
-    });
-}
+const mockApi = require("../../public/js/mockApi");
 
-let fn1 = mockApi("张三成功了");
-let fn2 = mockApi("李四失败了", false, 2000);
+let fn1 = mockApi("张三成功了", { isSuccess: true });
+let fn2 = mockApi("李四失败了", { isSuccess: false, delay: 2000 });
 fn1()
   .then((res) => {
-    console.log("then:" + res);
+    console.log("then:", res);
   })
   .catch((error) => {
     console.log(error);
@@ -22,7 +14,7 @@ fn2()
     console.log(res);
   })
   .catch((error) => {
-    console.log("error:" + error);
+    console.log("error:", error);
   });
 
 const mockAll = async () => {

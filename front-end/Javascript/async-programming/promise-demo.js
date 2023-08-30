@@ -1,20 +1,11 @@
-function mockApi(name, isSuccess = true, delay = 1000) {
-  return () =>
-    new Promise((resolve, reject) => {
-      let timer = setTimeout(() => {
-        console.log(name + "执行了");
-        isSuccess ? resolve(name + "成功了") : reject(name + "失败了");
-        clearTimeout(timer);
-      }, delay);
-    });
-}
+const mockApi = require("../../public/js/mockApi");
 
-const api1 = mockApi("李四", true, 1000),
-  api2 = mockApi("钱七", true, 2000),
-  api3 = mockApi("张三丰", true, 3000),
-  apiFailed1 = mockApi("西波莉莉", false, 1000),
-  apiFailed2 = mockApi("佐罗", false, 2000),
-  apiFailed3 = mockApi("乐可", false, 3000);
+const api1 = mockApi("李四", { isSuccess: true, delay: 1000 }),
+  api2 = mockApi("钱七", { isSuccess: true, delay: 2000 }),
+  api3 = mockApi("张三丰", { isSuccess: true, delay: 3000 }),
+  apiFailed1 = mockApi("西波莉莉", { isSuccess: false, delay: 1000 }),
+  apiFailed2 = mockApi("佐罗", { isSuccess: false, delay: 2000 }),
+  apiFailed3 = mockApi("乐可", { isSuccess: false, delay: 3000 });
 // 一般调用
 apiFailed1()
   .then((res) => {
