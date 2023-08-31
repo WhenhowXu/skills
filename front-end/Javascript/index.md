@@ -3,6 +3,8 @@
   - [数据类型检测方法](./data-type/judge-type.md)
   - [隐式转化和强制转化](./data-type/type-turn.md)
 - **数组**
+  - 静态方法
+  - 数组原型的方法
 - **函数**
   - 闭包
   - 柯里化
@@ -10,7 +12,7 @@
 - **字符串**
 - **日期**
 - **ES6**
-- **Proxy**
+- [Proxy](./proxy/index.md)
 - **Map WeakMap**
 - **Set WeakSet**
 - **面向对象编程**
