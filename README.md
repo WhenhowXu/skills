@@ -1,9 +1,9 @@
 ### front-end
 
-- ⭐️JavaScript [D](./front-end//Javascript/index.md)
+- ⭐️[JavaScript](./front-end//Javascript/index.md)
 - ⭐️[Vue3](./Vue3/index.md)
 - ⭐️[React](./React/index.md)
-- ⭐️ 性能优化 [D](./front-end/optimize/index.md)
+- ⭐️[性能优化](./front-end/optimize/index.md)
 - ⭐️[TypeScript](./TypeScript/index.md)
 - [Vue2](./Vue2/index.md)
 - [HTML](./HTML/index.md)

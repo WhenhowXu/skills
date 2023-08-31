@@ -3,8 +3,11 @@
   - [数据类型检测方法](./data-type/judge-type.md)
   - [隐式转化和强制转化](./data-type/type-turn.md)
 - **数组**
-  - 静态方法
-  - 数组原型的方法
+  - [数组长度](./array/length.md)
+  - [静态方法](./array/static-functions.md)
+  - [数组原型的方法](./array/instance-functions.md)
+  - [数组排序算法](./array/sort/index.md)
+  - [树结构搜索匹配项](./array/tree-search.js)
 - **函数**
   - 闭包
   - 柯里化

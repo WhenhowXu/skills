@@ -1,0 +1,1 @@
+- `Array.isArray(array)`: 判断是否为数组
