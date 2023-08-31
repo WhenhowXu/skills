@@ -41,7 +41,25 @@ typeof (() => {}); // function
     - 封装数据类型判断的方法
 
     ```js
-
+    const is = {};
+    [
+      "Array",
+      "Undefined",
+      "Number",
+      "String",
+      "Null",
+      "Date",
+      "Function",
+    ].forEach((key) => {
+      is["is" + key] = function (obj) {
+        let typeString = Object.prototype.toString.call(obj);
+        const matchStr = /^\[object (\w+)\]$/.exec(typeString)?.[1];
+        return matchStr.toLowerCase() === key.toLowerCase();
+      };
+    });
+    console.log(is.isArray([])); // true
+    console.log(is.isFunction(() => {})); // true
+    console.log(is.isNumber(3)); // true
     ```
 
 - `instanceof` 判断该对象是否为某一构造函数的实例
