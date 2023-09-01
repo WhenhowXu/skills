@@ -9,18 +9,31 @@
   - [数组排序算法](./array/sort/index.md)
   - [树结构搜索匹配项](./array/tree-search.js)
 - **函数**
-  - 闭包
+  - [this](./function/this.md)
+  - call & apply & bind
+  - [标签函数](./function/tag-function.md)
+  - [箭头函数](./function/arrow-function.md)
+  - [生成器函数](./function/generator-function.md)
+  - [闭包](./function/clusure.md)
+  - 作用域
   - 柯里化
 - **对象**
+- **正则**
+  - 捕获
+  - [常用正则表达式](./regexp/common-regexp.md)
 - **字符串**
 - **日期**
 - **ES6**
-- [Proxy](./proxy/index.md)
+  - let const
+  - 解构赋值
+  - 模板字符串
+  - 拓展运算符
+  - 箭头函数
+  - [Proxy](./proxy/index.md)
 - **Map WeakMap**
 - **Set WeakSet**
 - **面向对象编程**
-  - 原型链
-  - 继承
+  - 原型链&继承
 - **JS 沙箱**
 - **异步编程**
   - [Promise](./async-programming/promise.md)
