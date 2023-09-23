@@ -1,26 +1,27 @@
 ### CSS (Cascading Style Sheets)
 
-> 层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
+- **定义：** 层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
 
-- 插入样式表的三种方法
+- **插入样式表的三种方法：**
   - 外部样式表 link 标签引入
   - 内部样式表 style 标签
   - 内联样式
 
 ### CSS 基础
 
-- display 布局 [D](./display/index.md)
+- [display 布局](./display/index.md)
 - visibility 可见性
-- position 定位 [D](./postion/index.md)
+- [position 定位](./postion/index.md)
 - animation 帧动画
 - transition 过度动画
 - transform 变形
-- background 背景 [D](./basic/background/index.md)
-- box-shadow 阴影 [D](./basic/box-shadow/index.md)
+- [background 背景](./basic/background/index.md)
+- [box-shadow 阴影](./basic/box-shadow/index.md)
 
 ### 知识点
 
 - [flex 布局](./Flex/index.md)
+- [圣杯布局](./layouts/1.html)
 - [双飞翼布局 | 圣杯布局]()
 - [动画 animate | transition 的区别]()
 - [长度单位 rem | em | px 区别]()
@@ -44,6 +45,8 @@
 - [CSS 变量]()
 - [BFC](./BFC.md)
 - [清除浮动](./BFC/clear-both.html)
+- 权重
+- 如何水平居中一个元素
 
 ### Libraries
 
