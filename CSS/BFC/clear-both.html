@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动，如何清除浮动</title>
+    <style>
+        .container {
+            width: 400px;
+            background-color: orange;
+        }
+
+        .box {
+            float: left;
+            width: 120px;
+            height: 120px;
+            background-color: blue;
+        }
+
+        .container.hidden {
+            overflow: hidden;
+        }
+
+        .empty-last {
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>浮动</h3>
+    <p>子元素设置了float，元素脱离了文档流，无法撑起父元素的高度</p>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>1、清除浮动： 给父元素设置overflow:hidden</h3>
+    <div class="container hidden">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>2、清除浮动： 新增一个空元素给其设置clear-both</h3>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="empty-last"></div>
+    </div>
+</body>
+
+</html>

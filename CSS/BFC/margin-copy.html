@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC 避免margin重叠</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: red;
+            margin: 10px auto;
+        }
+
+        .box2 {
+            background-color: orange;
+            margin: 20px auto;
+        }
+
+        .wrapper {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>1、垂直方向margin重叠，按理box1和box2的margin应该是30px，事实上却只有20px</h3>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+
+    <h3>2、包裹一层BFC容器，box1和box2垂直方向上的margin就是他们设置的margin之和30px</h3>
+    <div class="wrapper">
+        <div class="box box1"></div>
+    </div>
+    <div class="wrapper">
+        <div class="box box2"></div>
+    </div>
+</body>
+
+</html>
