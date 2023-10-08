@@ -21,3 +21,9 @@
  3、保存后`git rebase continue`
  4、`git push origin --force-with-lease` 推送期间如果有变化推送将会被拒绝，比--force 更加安全
 ```
+
+- 合指定 commit 代码
+
+  - 1.先切换到分支 A，git log 查看 commitID
+  - 2.再切换到分支 B，git cherry-pick A 的 commitID
+  - 3.最后 git status /git push 即可

@@ -1,8 +1,8 @@
 ### CSS (Cascading Style Sheets)
 
-- **定义：** 层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
+- **定义**：层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
 
-- **插入样式表的三种方法：**
+- **插入样式表的三种方法**：
   - 外部样式表 link 标签引入
   - 内部样式表 style 标签
   - 内联样式
@@ -47,6 +47,10 @@
 - [清除浮动](./BFC/clear-both.html)
 - 权重
 - 如何水平居中一个元素
+- DPR
+- 清除浮动
+- CSS 变量
+- [@media 媒体查询](./media/index.md)
 
 ### Libraries
 
@@ -60,5 +64,3 @@
 - [Animate.css 动画库](https://www.jq22.com/yanshi819)
 
 
-- [@media 媒体查询](./media/index.md)
-- 清除浮动 
