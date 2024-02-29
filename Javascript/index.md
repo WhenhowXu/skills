@@ -169,91 +169,29 @@
   - 地址
   - 网址
 
-### Function 函数
+### 函数
 
-- Generator Function 生成器函数 [D](./Function/1-generator.md)
-- Arrow Function 箭头函数 [D](./Function/2-arrow.md)
-- Tag Function 标签函数 [D](./function/3-tag-function.md)
-- `IIFE` 自执行函数
-
-  > 定义函数后立马执行。其中定义变量和函数，而不会污染全局作用域
-
+- [函数种类]
 - 实例方法
-  - `call`:
-  - `apply`:
-  - `bind`:
-  - `toString`:
-- arguments
 - [作用域](./function/scope.md)
 - [this]()
 - [闭包](./function/clusure.md)
 - [防抖 | 节流]()
+- [递归]
+- [new 操作符]()
 
-### Array 数组
+### 数组
 
-- 静态方法:
-  - `isArray`: 判断是否为数组
-- 实例属性:
-  - `length` 数组长度 [D](./Array/length.md)
-- 实例方法:
-
-  - `valueOf`：返回数组本身
-  - `toString`：返回数组转化后的字符串
-  - `push`：末尾添加一到多项 [D](./Array/1-push.md)
-  - `pop`：删除最后一项 [D](./Array/2-pop.md)
-  - `unshift`：开头添加一到多项 [D](./Array/3-unshift.md)
-  - `shift`：删除第一个元素 [D](./Array/4-shift.md)
-  - `join`: 拼接成字符串 [D](./Array/5-join.md)
-  - `concat`: 合并 [D](./Array/6-concat.md)
-  - `reverse`：颠倒 [D](./Array/7-reverse.md)
-  - `slice`: 截取 [D](./Array/8-slice.md)
-  - `splice`: 删除一部分成员，并添加部分成员 [D](./Array/9-splice.md)
-  - `sort`(排序)
-  - `map`(映射)
-  - `forEach`(遍历)
-  - `filter`(过滤)
-  - `some`(一个成员满足条件，则返回 true)
-  - `every`(每个成员满足条件，则返回 true)
-  - `reduce | reduceRight`(归纳)
-  - `indexOf | lastIndexOf`(返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1)
-
-- [数组空位](./array/empty.md)
+- [数组方法](./array/functions.md)
 - [排序](./array/sort/index.md)
-- [去重](./array/removeDuplicate.md)
+- [去重](./array/unique.md)
 - [遍历](./array/ergodic.md)
-- **类数组**: 通过索引属性访问元素并且拥有 length 属性的对象
+- [类数组] 通过索引属性访问元素并且拥有 length 属性的对象
+- [数组塌陷]()
 
-### Date 日期
+### 日期
 
-- `Date()`: 当做普通函数返回当前时间
-- 静态方法 `Date[functions]`
-  - `now`:
-  - `parse`:
-  - `UTC`:
-- 实例方法 `Date.prototype[functions]`
-
-  - `valueOf`:
-  - `toString`: 返回一个完整的日期字符串
-  - `toUTCString`: 对应的 UTC 时间，也就是比北京时间晚 8 个小时
-  - `toISOString`: 对应时间的 ISO8601 写法， UTC 时区的时间
-  - `toJSON`: 与`toISOString`返回相同
-  - `toDateString`: 方法返回日期字符串（不含小时、分和秒）
-  - `toTimeString`: 方法返回时间字符串（不含年月日）
-  - `toLocaleString`: '2023/8/15 13:32:52'
-  - `toLocaleDateString`: '2023/8/15'
-  - `toLocaleTimeString`: '13:34:34'
-  - `getTime`: 返回实例距离 1970 年 1 月 1 日 00:00:00 的毫秒数，等同于 valueOf 方法。
-  - `getDate`: 返回实例对象对应每个月的几号（从 1 开始
-  - `getDay`: 返回星期几，星期日为 0
-  - `getFullYear`: 年份
-  - `getMonth`: 月份
-  - `getHours`: 小时
-  - `getMinutes`: 分钟
-  - `getSeconds`: 秒
-  - `getMilliseconds`: 毫秒
-  - `getTimezoneOffset`: 返回当前时间与 UTC 的时区差异，以分钟表示，返回结果考虑到了夏令时因素
-
-- 如何获取一个月有多少天
+- [如何获取一个月有多少天]
 - [moment]()
 - [day.js]()
 
@@ -268,11 +206,10 @@
 - 回调地狱
 - Promise [D](./Promise/index.md)
 - async await
+- []
 
 ### 元素
 
-- `document`
-  - `open`: 清空页面内容，渲染新页面
 - [事件对象]()
 - [事件委托]()
 - [获取元素]()
@@ -293,20 +230,10 @@
 - [BOM | DOM](./DOM&BOM/index.md)
 - [虚拟列表]() _(按需渲染，只渲染可视区域的数据)_
 - [服务端渲染]()
-- 大前端
-- 加密方式
+- [大前端]()
+- [加密方式]()
 - [关键字搜索](./array/search/index.js)
 
-### 面向对象编程
+### 版本
 
-### 浏览器
-
-### ES6
-
-- `let | const`
-- 解构赋值
-- Symbol
-- Map Set
-- Reflect Proxy
-
-
+- [ES6]()
