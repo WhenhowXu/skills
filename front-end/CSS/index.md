@@ -1,6 +1,5 @@
 ### CSS (Cascading Style Sheets)
-
-- **定义**：层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
+> 层叠样式表，是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言
 
 - **插入样式表的三种方法**：
   - 外部样式表 link 标签引入
@@ -52,15 +51,15 @@
 - CSS 变量
 - [@media 媒体查询](./media/index.md)
 
-### Libraries
+### 插件库
 
-- [postcss]()
+- postcss
   > css 编译工具，使用下一代 css 语法、自动补全浏览器前缀、px 代转 rem、css 代码压缩等
 - [Less]()
   > css 预处理器
 - [Sass]()
   > css 预处理器
 - [Styled Components]()
-- [Animate.css 动画库](https://www.jq22.com/yanshi819)
+- [animate.css 动画库](https://www.jq22.com/yanshi819)
 
 
