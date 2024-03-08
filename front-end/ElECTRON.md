@@ -1,0 +1,6 @@
+- [Electron 中文文档](https://www.kancloud.cn/wizardforcel/electron-doc/137791)
+- [官方简单示例项目](https://github.com/electron/electron-quick-start)
+- [Electron 简单介绍和 QT 优劣对比](https://blog.csdn.net/weixin_44816664/article/details/131067465)
+- [vue3 vite 项目集成 Electron 示例](https://github.com/Deluze/electron-vue-template)
+- 如何使用 Electron 调用串口扫码 serialport 库
+- 如何使用 Electron 调用打印机
