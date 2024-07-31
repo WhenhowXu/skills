@@ -7,6 +7,9 @@
   - [静态方法](./array/static-functions.md)
   - [数组原型的方法](./array/instance-functions.md)
   - [数组排序算法](./array/sort/index.md)
+    - 冒泡排序
+    - 快速排序
+    - 插入排序
   - [树结构搜索匹配项](./array/tree-search.js)
 - **函数**
   - 变量提升
@@ -21,6 +24,9 @@
 - **函数式编程**
   - 柯里化
 - **对象**
+
+  - 常用正则表达式
+
 - **正则**
   - 捕获
   - [常用正则表达式](./regexp/common-regexp.md)
@@ -36,6 +42,8 @@
   - 箭头函数
   - [Proxy](./proxy/index.md)
   - 类
+  - Promise
+  - async await
 - **Map WeakMap**
 - **Set WeakSet**
 - **面向对象编程**
