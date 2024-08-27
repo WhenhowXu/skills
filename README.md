@@ -1,13 +1,31 @@
-# 大前端
+# JavaScript
 
-- [Javascript](./front-end/JAVASCRIPT.md)
-- [常用类库](./front-end/LIBARIES.md)
-- [Electron](./front-end/ElECTRON.md)
-- 性能优化
-- **参考资料库**
-  - [Chrome 高级调试技巧](https://blog.csdn.net/COCOLI_BK/article/details/125993814)
+### 基础
 
-# 后台
+- [x] [数据类型](./javascript/类型.md)
+- [ ] this 关键字
+- [ ] 继承
+- [ ] js 沙箱
+- [ ] 函数
 
-- [NodeJS]
-- [数据库]
+### 进阶
+
+- [] eventloop
+
+---
+
+# Vue2
+
+- [ ] 数据双向绑定
+
+# Vue3
+
+# NodeJS
+
+# Java
+
+# 常用工具整理
+
+- [x] [git](./Tools/git.md)
+- [ ] nginx
+- [ ] npm
